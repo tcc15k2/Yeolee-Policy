@@ -1,6 +1,6 @@
 # GoodSleep Privacy Policy
 
-Effective date: 2026-10-16
+Effective date: 2026-10-15
 Operator: Yeolee · Contact: tcc15k2@gmail.com
 Korean version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy.html · German version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-de.html
 

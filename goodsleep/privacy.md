@@ -1,6 +1,6 @@
 # 꿀잠(GoodSleep) 개인정보처리방침
 
-시행일: 2026-10-16
+시행일: 2026-10-15
 운영자: Yeolee · 문의: tcc15k2@gmail.com
 English version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-en.html · Deutsche Fassung: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-de.html
 

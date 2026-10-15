@@ -1,6 +1,6 @@
 # Datenschutzerklärung für GoodSleep
 
-Gültig ab: 2026-10-16
+Gültig ab: 2026-10-15
 Verantwortlicher: Yeolee (Einzelentwickler) · Kontakt: tcc15k2@gmail.com
 Englische Fassung: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-en.html · Koreanische Fassung: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy.html
 
