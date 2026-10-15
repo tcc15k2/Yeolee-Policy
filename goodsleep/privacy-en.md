@@ -1,6 +1,6 @@
 # GoodSleep Privacy Policy
 
-Effective date: 2026-10-15
+Effective date: 2026-10-16
 Operator: Yeolee · Contact: tcc15k2@gmail.com
 Korean version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy.html · German version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-de.html
 
@@ -37,7 +37,7 @@ If you connect it, sleep times and sleep stages are **written** to Health Connec
 
 | Service | Information sent | Purpose | How to turn off |
 |---|---|---|---|
-| Firebase Analytics | Events such as how often features are used (sleep records and sounds are not sent), device and app version | Improving the product | Profile > Send usage statistics |
+| Firebase Analytics | Events such as how often features are used (sleep records and sounds are not sent), device and app version. **Off by default; sent only if you turn on Profile > "Send usage statistics"** | Improving the product | Profile > Send usage statistics |
 | Firebase Crashlytics | Crash reports (device model, OS, stack trace) | Stability | — |
 | Firebase Remote Config | (Receive only) feature switch values | Turning a feature off remotely if there is a problem | — |
 | Google AdMob | Advertising ID and app set ID, IP address (which may be used to estimate approximate location), interactions such as app launches and taps, and diagnostic information about app and ad SDK performance | Showing banner ads, measuring and analyzing ad performance, preventing misuse | Profile > Privacy and ad consent |
@@ -59,7 +59,7 @@ If this policy changes, we will say so in the app and in this document together 
 
 ## 8. Users in the EU/EEA, the UK and Switzerland
 - **Controller**: Yeolee (individual developer), tcc15k2@gmail.com.
-- **Legal bases (GDPR Art. 6(1))**: account and backup — performance of the service you requested (b); Health Connect — your consent (a), which you can withdraw in Health Connect at any time; advertising (AdMob) — your consent through the UMP form (a); usage statistics (Firebase Analytics) — legitimate interest in improving the app (f), which you can turn off in Profile at any time; crash reports and Remote Config — legitimate interest in stable and secure operation (f). Information that stays on your phone (section 2) is not transmitted to us.
+- **Legal bases (GDPR Art. 6(1))**: account and backup — performance of the service you requested (b); Health Connect — your consent (a), which you can withdraw in Health Connect at any time; advertising (AdMob) — your consent through the UMP form (a); usage statistics (Firebase Analytics) — your consent (a), given by turning it on in Profile, which you can withdraw at any time; crash reports and Remote Config — legitimate interest in stable and secure operation (f). Information that stays on your phone (section 2) is not transmitted to us.
 - **International transfers**: Firebase and AdMob are provided by Google, and data may be transferred to the United States. Google LLC is certified under the EU-US Data Privacy Framework, and the European Commission's standard contractual clauses also apply.
 - **Your rights**: access, rectification, erasure, restriction of processing, data portability (for example through the CSV export in the app), and objection to processing based on legitimate interests. You can withdraw consent at any time with effect for the future. You also have the right to lodge a complaint with a data protection supervisory authority, in particular in the member state where you live. Send requests to tcc15k2@gmail.com.
 

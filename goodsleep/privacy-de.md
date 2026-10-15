@@ -1,6 +1,6 @@
 # Datenschutzerklärung für GoodSleep
 
-Gültig ab: 2026-10-15
+Gültig ab: 2026-10-16
 Verantwortlicher: Yeolee (Einzelentwickler) · Kontakt: tcc15k2@gmail.com
 Englische Fassung: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-en.html · Koreanische Fassung: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy.html
 
@@ -37,7 +37,7 @@ Wenn Sie Health Connect verbinden, werden Schlafzeiten und Schlafphasen in Healt
 
 | Dienst | Übermittelte Daten | Zweck | Abschalten |
 |---|---|---|---|
-| Firebase Analytics | Ereignisse wie die Nutzungshäufigkeit von Funktionen (keine Schlafaufzeichnungen, keine Klänge), Geräte- und App-Version | Verbesserung der App | Profil > „Nutzungsstatistik senden“ |
+| Firebase Analytics | Ereignisse wie die Nutzungshäufigkeit von Funktionen (keine Schlafaufzeichnungen, keine Klänge), Geräte- und App-Version. **Standardmäßig aus; wird nur gesendet, wenn Sie Profil > „Nutzungsstatistik senden“ selbst einschalten** | Verbesserung der App | Profil > „Nutzungsstatistik senden“ |
 | Firebase Crashlytics | Absturzberichte (Gerätemodell, Betriebssystem, Stacktrace) | Stabilität | — |
 | Firebase Remote Config | (nur Empfang) Werte von Funktionsschaltern | Funktionen bei Problemen aus der Ferne abschalten | — |
 | Google AdMob | Werbe-ID und App-Set-ID, IP-Adresse (kann zur Schätzung des ungefähren Standorts verwendet werden), Interaktionen wie App-Starts und Tippen sowie Diagnosedaten zur Leistung von App und Werbe-SDK | Anzeige von Bannerwerbung, Messung und Analyse der Werbeleistung, Missbrauchsverhinderung | Profil > „Datenschutz und Werbeeinwilligung“ |
@@ -50,7 +50,7 @@ Wenn Sie Health Connect verbinden, werden Schlafzeiten und Schlafphasen in Healt
 - **Backup und Konto**: Erfüllung des Nutzungsverhältnisses auf Ihren Wunsch (Art. 6 Abs. 1 lit. b DSGVO).
 - **Health Connect**: Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die Sie in Health Connect jederzeit widerrufen können.
 - **Werbung (AdMob)**: Ihre Einwilligung über das UMP-Formular (Art. 6 Abs. 1 lit. a DSGVO); ohne Einwilligung werden nur nicht personalisierte Anzeigen ausgeliefert, soweit Google dies zulässt.
-- **Nutzungsstatistik (Firebase Analytics)**: berechtigtes Interesse an der Verbesserung der App (Art. 6 Abs. 1 lit. f DSGVO). Sie können die Übermittlung jederzeit im Profil abschalten.
+- **Nutzungsstatistik (Firebase Analytics)**: Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 TDDDG), die Sie durch Einschalten im Profil erteilen und jederzeit dort widerrufen können.
 - **Absturzberichte und Remote Config**: berechtigtes Interesse an einem stabilen und sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO).
 - Daten, die nur auf Ihrem Smartphone bleiben (Abschnitt 2), werden nicht an uns übermittelt.
 

@@ -1,6 +1,6 @@
 # 꿀잠(GoodSleep) 개인정보처리방침
 
-시행일: 2026-10-15
+시행일: 2026-10-16
 운영자: Yeolee · 문의: tcc15k2@gmail.com
 English version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-en.html · Deutsche Fassung: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-de.html
 
@@ -36,7 +36,7 @@ English version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-en.ht
 
 | 서비스 | 보내는 정보 | 목적 | 끄는 방법 |
 |---|---|---|---|
-| Firebase Analytics | 기능 사용 횟수 등 이벤트(수면 기록·소리 내용은 보내지 않음), 기기·앱 버전 | 제품 개선 | 프로필 > 사용 통계 전송 |
+| Firebase Analytics | 기능 사용 횟수 등 이벤트(수면 기록·소리 내용은 보내지 않음), 기기·앱 버전. **기본으로 꺼져 있으며, 프로필 > "사용 통계 전송"을 직접 켠 경우에만 전송합니다** | 제품 개선 | 프로필 > 사용 통계 전송 |
 | Firebase Crashlytics | 크래시 보고서(기기 모델, OS, 스택 트레이스) | 안정성 | — |
 | Firebase Remote Config | (받기만 함) 기능 스위치 값 | 문제 시 기능 원격 해제 | — |
 | Google AdMob | 광고 ID·앱 세트 ID, IP 주소(대략적인 위치 추정에 쓰일 수 있음), 앱 실행·탭 같은 상호작용, 앱·광고 SDK 성능 진단 정보 | 배너 광고 표시, 광고 실적 측정·분석, 부정 사용 방지 | 프로필 > 개인정보 · 광고 동의 |
