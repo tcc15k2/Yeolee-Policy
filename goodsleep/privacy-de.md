@@ -16,7 +16,7 @@ Alle Funktionen sind ohne Anmeldung nutzbar. Die folgenden Daten werden standard
 | Geräuschereignisse | Zeitpunkt und Dauer von erkanntem Schnarchen, Husten und Sprechen im Schlaf | Geräuschereignisse im Tagebuch |
 | Geräuschclips | **Kurze Ausschnitte (höchstens etwa 10 Sekunden, geringe Qualität)** rund um erkannte Ereignisse. Durchgehende Aufnahmen werden nie gespeichert | Erneutes Anhören im Tagebuch |
 | Mixe, Schlafziele, Einstellungen | Gespeicherte Klangkombinationen, Ziele pro Wochentag, App-Einstellungen | Funktion der App |
-| Diagnoseprotokoll | Zeitpunkte und Namen von Ereignissen des Klangdienstes, der Aufzeichnung und der Wiedergabe (z. B. „Wiedergabefehler“, „Ausgabegerät getrennt“) sowie der Grund, warum der App-Prozess zuletzt beendet wurde. Es enthält keine Audiodaten, keine Schlafdaten und keine personenbezogenen Kennungen | Herausfinden, warum der Klang gestoppt hat. Es bleibt auf Ihrem Smartphone und verlässt es nur, wenn Sie selbst Profil > „Diagnoseprotokoll senden“ wählen |
+| Diagnoseprotokoll | Zeitpunkte und Namen von Ereignissen des Klangdienstes, der Aufzeichnung und der Wiedergabe (z. B. „Wiedergabefehler“, „Ausgabegerät getrennt“) sowie der Grund, warum der App-Prozess zuletzt beendet wurde. Es enthält keine Audiodaten, keine Schlafdaten und keine personenbezogenen Kennungen | Herausfinden, warum der Klang gestoppt hat. Es wird auf Ihrem Smartphone gespeichert und verlässt es, wenn Sie selbst Profil > „Diagnoseprotokoll senden“ wählen. Stürzt die App ab oder tritt ein Fehler auf, werden die letzten Einträge dem Absturzbericht beigefügt (Abschnitt 4) |
 
 - Mikrofonaudio wird **nur auf Ihrem Smartphone analysiert** und nie an einen Server gesendet. Dafür wird ein Klassifizierungsmodell verwendet, das auf dem Gerät läuft (YAMNet).
 - Geräuschclips werden je nach Einstellung „Geräuschclips aufbewahren“ im Profil (nicht speichern / 1 / 20 / 100 Nächte) automatisch gelöscht. Mit „Daten löschen“ können Sie sie sofort entfernen.
@@ -38,7 +38,7 @@ Wenn Sie Health Connect verbinden, werden Schlafzeiten und Schlafphasen in Healt
 | Dienst | Übermittelte Daten | Zweck | Abschalten |
 |---|---|---|---|
 | Firebase Analytics | Ereignisse wie die Nutzungshäufigkeit von Funktionen (keine Schlafaufzeichnungen, keine Klänge), Geräte- und App-Version. **Standardmäßig aus; wird nur gesendet, wenn Sie Profil > „Nutzungsstatistik senden“ selbst einschalten** | Verbesserung der App | Profil > „Nutzungsstatistik senden“ |
-| Firebase Crashlytics | Absturzberichte (Gerätemodell, Betriebssystem, Stacktrace) | Stabilität | — |
+| Firebase Crashlytics | Absturz- und Fehlerberichte (Gerätemodell, Betriebssystem, Stacktrace sowie das aktuelle Diagnoseprotokoll – nur Namen und Zeitpunkte von App-Ereignissen, keine Audio- oder Schlafdaten) | Stabilität | — |
 | Firebase Remote Config | (nur Empfang) Werte von Funktionsschaltern | Funktionen bei Problemen aus der Ferne abschalten | — |
 | Google AdMob | Werbe-ID und App-Set-ID, IP-Adresse (kann zur Schätzung des ungefähren Standorts verwendet werden), Interaktionen wie App-Starts und Tippen sowie Diagnosedaten zur Leistung von App und Werbe-SDK | Anzeige von Bannerwerbung, Messung und Analyse der Werbeleistung, Missbrauchsverhinderung | Profil > „Datenschutz und Werbeeinwilligung“ |
 
