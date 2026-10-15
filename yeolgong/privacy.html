@@ -150,11 +150,12 @@
   <div class="brand"><span class="lamp" aria-hidden="true"></span>열공모드</div>
   <h1>개인정보처리방침</h1>
   <ul class="meta">
-    <li><b>시행일</b>2026-10-15</li>
+    <li><b>시행일</b>2026-10-22</li>
     <li><b>운영자</b>Yeolee</li>
     <li><b>문의</b><a href="mailto:tcc15k2@gmail.com">tcc15k2@gmail.com</a></li>
   </ul>
   <p class="lead">열공모드는 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고 관련 문의를 빠르게 처리하기 위해 이 방침을 둡니다.</p>
+  <p class="lead"><strong>2026-10-22부터 바뀌는 내용(2026-10-15 공지):</strong> 창문 신호가 정식 앱에서 왔는지 확인하는 절차(Firebase App Check, Google Play Integrity)를 <a href="#s3-1">3-1절</a>, <a href="#s8">8절</a>, <a href="#s12">12절</a>에 추가했습니다. 보내는 정보의 종류는 바뀌지 않습니다.</p>
 </header>
 
 <aside class="summary" aria-labelledby="summary-title">
@@ -224,6 +225,7 @@
         <tr><th scope="row">보내는 정보</th><td>매일 바뀌는 무작위 번호, 준비하는 시험 분류(수능 / 공무원 시험 / 자격증·어학 / 대학·그 밖), 공부 중인지 여부</td></tr>
         <tr><th scope="row">보내지 않는 정보</th><td>이름, 공부 시간, 과목, 메모, 위치</td></tr>
         <tr><th scope="row">보내는 때</th><td>공부를 시작하고 끝낼 때, 공부하는 동안 약 5분마다</td></tr>
+        <tr><th scope="row">정식 앱 확인</th><td>신호가 정식 열공모드 앱에서 왔는지 확인하려고 Firebase App Check와 Google Play Integrity를 씁니다. 앱은 Google에서 받은 확인 토큰을 신호와 함께 보내고, 서버는 토큰이 유효한지만 확인하며 토큰을 저장하지 않습니다. 확인 과정에서 앱과 기기가 정상인지 판단하는 데 필요한 정보는 Google Play 서비스와 Firebase가 처리합니다.</td></tr>
         <tr><th scope="row">목적</th><td>지금 공부 중인 사람 수와 오늘 공부한 사람 수 집계</td></tr>
         <tr><th scope="row">보관</th><td>무작위 번호가 붙은 신호는 집계가 끝나면 지우며 <strong>48시간을 넘겨 보관하지 않습니다</strong>. 번호 없이 숫자만 남은 집계 결과는 통계로 남을 수 있습니다.</td></tr>
         <tr><th scope="row">끄는 방법</th><td>설정의 "창문에 내 불빛 보태기"를 끄면 그때부터 보내지 않습니다.</td></tr>
@@ -315,7 +317,7 @@
     <table class="kv">
       <tbody>
         <tr><th scope="row">받는 자</th><td>Google LLC<br>1600 Amphitheatre Parkway, Mountain View, CA 94043, USA<br>개인정보 문의: <a href="https://support.google.com/policies/contact/general_privacy_form">Google 개인정보 문의 양식</a></td></tr>
-        <tr><th scope="row">맡기는 업무</th><td>사용 통계 분석(Firebase Analytics), 오류 보고 수집(Firebase Crashlytics), 창문 집계 서버 운영(Firebase)</td></tr>
+        <tr><th scope="row">맡기는 업무</th><td>사용 통계 분석(Firebase Analytics), 오류 보고 수집(Firebase Crashlytics), 창문 집계 서버 운영(Firebase), 창문 신호의 정식 앱 확인(Firebase App Check, Google Play Integrity)</td></tr>
         <tr><th scope="row">이전 국가</th><td>미국 등 Google이 데이터센터를 운영하는 국가</td></tr>
         <tr><th scope="row">이전 항목</th><td><a href="#s3">3절</a>에 적은 보내는 정보</td></tr>
         <tr><th scope="row">이전 시기와 방법</th><td>앱을 쓰는 동안 네트워크로 수시 전송(TLS 암호화)</td></tr>
@@ -352,6 +354,7 @@
   <ul>
     <li>공부 기록을 서버로 보내지 않는 구조로 수집 자체를 줄입니다.</li>
     <li>모든 전송을 TLS로 암호화합니다.</li>
+    <li>창문 서버는 정식 앱에서 온 신호만 받습니다(Firebase App Check).</li>
     <li>서버와 Firebase 콘솔 접근을 운영자 계정으로 한정하고 2단계 인증을 씁니다.</li>
     <li>앱에서 광고 ID 권한을 제거해 광고 ID를 읽지 않습니다.</li>
   </ul>
@@ -389,6 +392,7 @@
   <h2>15. 방침의 변경</h2>
   <p>방침이 바뀌면 시행 7일 전에 앱과 이 페이지에 알립니다. 새 정보를 수집하는 것처럼 이용자 권리에 중요한 변경은 30일 전에 알리고, 필요한 경우 다시 동의를 받습니다.</p>
   <ul class="history">
+    <li>2026-10-22: 창문 신호의 정식 앱 확인(Firebase App Check, Google Play Integrity) 추가 — 2026-10-15 공지</li>
     <li>2026-10-15: 처음 시행</li>
   </ul>
 </section>
