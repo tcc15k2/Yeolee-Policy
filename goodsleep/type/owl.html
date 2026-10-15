@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>나는 생각 많은 부엉이 🦉</title>
-<meta name="description" content="불을 끄면 머릿속 극장이 개봉해요 · 꿀잠 수면 유형 테스트로 나의 잠버릇 동물을 알아보세요">
+<meta name="description" content="불을 끄면 머릿속 극장이 개봉해요 · 꿀잠 수면 유형 테스트로 나의 잠버릇 동물과 친구와의 잠자리 궁합을 알아보세요">
 <meta property="og:type" content="website">
 <meta property="og:title" content="나는 생각 많은 부엉이 🦉">
-<meta property="og:description" content="불을 끄면 머릿속 극장이 개봉해요 · 꿀잠 수면 유형 테스트로 나의 잠버릇 동물을 알아보세요">
+<meta property="og:description" content="불을 끄면 머릿속 극장이 개봉해요 · 꿀잠 수면 유형 테스트로 나의 잠버릇 동물과 친구와의 잠자리 궁합을 알아보세요">
 <meta property="og:image" content="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/og/owl.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,8 +19,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-:root{--night:#0E1024;--night2:#1B1E3E;--honey:#E9C46A;--cream:#F4ECD6;--lav:#B7B3D6;--line:rgba(244,236,214,.14)}
+:root{--night:#0E1024;--night2:#1B1E3E;--honey:#E9C46A;--cream:#F4ECD6;--lav:#B7B3D6;--ink:#2A2440;--line:rgba(244,236,214,.14)}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{margin:0;background:var(--night);color:var(--cream)}
 body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;font-size:17px;line-height:1.6;
   min-height:100svh;background:radial-gradient(120% 70% at 50% -10%,#272B5C 0%,var(--night) 60%) fixed;
@@ -34,16 +35,20 @@ main{max-width:440px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-dire
 .moon{display:block;margin:8px auto 0}
 .brand{display:flex;align-items:center;gap:8px;color:var(--lav);font-size:15px;text-decoration:none}
 .brand b{color:var(--honey);font-weight:700}
-h1,.type-name{font-family:"Gowun Batang",serif;font-weight:700;letter-spacing:-.01em}
-h1{font-size:34px;line-height:1.3;margin:20px 0 12px}
-.lead{color:var(--lav);margin:0 0 28px}
+h1,.type-name,.tier,.q,.bubble,.say p,.analyzing{font-family:"Gowun Batang",serif}
+h1{font-size:34px;line-height:1.3;margin:20px 0 12px;font-weight:700;letter-spacing:-.01em}
+.lead{color:var(--lav);margin:0 0 22px}
+.cast{list-style:none;display:flex;justify-content:center;gap:5px;padding:0;margin:0 0 28px}
+.cast li{width:37px;height:37px;border-radius:50%;background:rgba(244,236,214,.07);display:grid;place-items:center;font-size:20px;margin:0}
 .q:focus{outline:none}
-.q{font-family:"Gowun Batang",serif;font-size:27px;line-height:1.35;margin:24px 0 22px;min-height:2.7em}
-.count{color:var(--lav);font-size:15px;margin-top:18px}
+.q{font-size:27px;line-height:1.35;margin:24px 0 22px;min-height:2.7em;font-weight:700}
+.count{display:flex;justify-content:space-between;align-items:center;color:var(--lav);font-size:15px;margin-top:18px}
+.back{background:none;color:var(--lav);font-size:15px;padding:6px 0;text-decoration:underline;text-underline-offset:3px}
 .opts{display:flex;flex-direction:column;gap:10px}
-button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:none;display:block;text-align:left}
-.opt{background:rgba(244,236,214,.06);border:1px solid var(--line);border-radius:14px;padding:15px 18px;font-size:17px;
-  transition:background .15s,border-color .15s}
+button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:none;display:block;text-align:left;background:none}
+.opt{display:flex;align-items:center;gap:14px;background:rgba(244,236,214,.06);border:1px solid var(--line);border-radius:14px;
+  padding:14px 16px;font-size:17px;transition:background .15s,border-color .15s}
+.opt .e{font-size:24px;width:30px;text-align:center;flex:none;line-height:1}
 .opt:hover{background:rgba(233,196,106,.12);border-color:rgba(233,196,106,.5)}
 .opt:active{transform:scale(.99)}
 .primary{background:var(--honey);color:#2A1E00;font-weight:700;border-radius:999px;padding:16px 22px;text-align:center;font-size:17px}
@@ -53,22 +58,74 @@ button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:n
 .spacer{flex:1}
 .fine{color:var(--lav);font-size:13px;line-height:1.55;margin-top:28px}
 .fine a{color:var(--lav)}
+.analyzing{text-align:center;font-size:23px;margin:30px 0 0}
+.z{display:inline-block;color:var(--honey);animation:zz 1.2s ease-in-out infinite;opacity:0;margin-left:2px}
+.z:nth-child(2){animation-delay:.2s}.z:nth-child(3){animation-delay:.4s}
+@keyframes zz{0%{opacity:0;transform:translateY(4px)}40%{opacity:1}100%{opacity:0;transform:translateY(-8px)}}
 .hero-emoji{font-size:64px;line-height:1;text-align:center;margin:-112px 0 40px;position:relative}
-.type-name{font-size:36px;line-height:1.25;text-align:center;margin:0}
-.type-line{text-align:center;color:var(--lav);margin:8px 0 26px}
+.type-name{font-size:36px;line-height:1.25;text-align:center;margin:0;font-weight:700}
+.type-line{text-align:center;color:var(--lav);margin:8px 0 18px}
+.bubble{position:relative;align-self:center;max-width:320px;margin:4px 0 26px;background:var(--cream);color:var(--ink);
+  border-radius:18px;padding:12px 18px 13px;text-align:center;font-size:18px;line-height:1.45}
+.bubble:before{content:"";position:absolute;top:-9px;left:50%;margin-left:-9px;border:9px solid transparent;border-top:0;border-bottom-color:var(--cream)}
+.bubble small{display:block;font-family:"Pretendard Variable",Pretendard,sans-serif;font-size:12px;color:#6B6590;margin-bottom:1px}
 section{border-top:1px solid var(--line);padding:18px 0}
-section h2{font-size:15px;font-weight:600;color:var(--honey);margin:0 0 8px}
+section h2{font-size:15px;font-weight:600;color:var(--honey);margin:0 0 10px}
+section h3{font-size:14px;font-weight:500;color:var(--lav);margin:0 0 4px}
 section p{margin:0}
 ul{margin:0;padding-left:1.1em}li{margin:2px 0}
-.mates{display:flex;gap:12px}.mates>div{flex:1}
+.stat{display:flex;align-items:center;justify-content:space-between;padding:5px 0}
+.moons{display:flex;gap:7px}
+.moons i{width:15px;height:15px;border-radius:50%;background:rgba(244,236,214,.13)}
+.moons i.on{background:var(--honey);box-shadow:0 0 8px rgba(233,196,106,.45)}
+.player{display:flex;align-items:center;gap:14px;margin:0 0 12px}
+.play{width:64px;height:64px;border-radius:50%;padding:0;flex:none}
+.play .i-pause{display:none}.play.on .i-pause{display:inline}.play.on .i-play{display:none}
+.player b{display:block;font-weight:600}
+.sub{color:var(--lav);font-size:14px}
+.mates{display:flex;gap:12px;margin-bottom:16px}.mates>div{flex:1}
 .mates a{color:var(--cream);text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.grid button{border-radius:14px;background:rgba(244,236,214,.06);border:1px solid var(--line);padding:10px 0 8px;text-align:center}
+.grid button span{display:block;font-size:26px;line-height:1.2}
+.grid button small{display:block;font-size:13px;color:var(--lav);margin-top:2px}
+.grid button[aria-pressed=true]{border-color:var(--honey);background:rgba(233,196,106,.16)}
+.match{margin-top:14px;padding:16px 18px;border-radius:16px;background:rgba(233,196,106,.08);border:1px solid rgba(233,196,106,.35)}
+.match .mt{color:var(--lav);font-size:14px;margin:0 0 4px}
+.mscore{display:flex;align-items:baseline;justify-content:space-between}
+.mscore .pe{font-size:26px}
+.mscore b{font-family:"Gowun Batang",serif;font-size:44px;color:var(--honey);font-variant-numeric:tabular-nums}
+.match .tier{font-size:21px;font-weight:700;margin:2px 0 6px}
+.match p{margin:0}
+.mlink{display:inline-block;margin-top:10px;color:var(--honey);font-size:15px;text-underline-offset:3px}
+.vsgo{margin:0 0 22px}
 .actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.others{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:22px}
+.others a{width:40px;height:40px;border-radius:50%;background:rgba(244,236,214,.06);display:grid;place-items:center;font-size:21px;text-decoration:none}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--cream);color:var(--night);
   padding:10px 16px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.on{opacity:1}
+.duo{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin:30px 0 8px}
+.who{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--cream);text-decoration:none;text-align:center;font-size:15px;line-height:1.3}
+.orb{width:92px;height:92px;border-radius:50%;background:var(--honey);display:grid;place-items:center;font-size:48px;
+  box-shadow:0 0 0 10px rgba(233,196,106,.10),0 0 36px rgba(233,196,106,.35)}
+.vs{text-align:center;color:var(--lav)}
+.vs b{display:block;font-family:"Gowun Batang",serif;font-size:56px;line-height:1;color:var(--honey);font-variant-numeric:tabular-nums}
+.tier{font-size:30px;line-height:1.3;text-align:center;margin:18px 0 8px;font-weight:700}
+.advice{text-align:center;color:var(--lav);margin:0 0 22px}
+.factor{padding:7px 0}
+.factor div{display:flex;justify-content:space-between;font-size:16px}
+.factor span{color:var(--lav)}
+.fbar{height:8px;border-radius:4px;background:rgba(244,236,214,.12);margin-top:6px;overflow:hidden}
+.fbar i{display:block;height:100%;border-radius:4px;background:var(--honey)}
+.say{display:flex;gap:10px;align-items:flex-end;margin:10px 0}
+.say.r{flex-direction:row-reverse}
+.say .who-e{font-size:30px;line-height:1}
+.say p{background:rgba(244,236,214,.08);border:1px solid var(--line);border-radius:16px;padding:10px 14px;max-width:78%}
 .fade{animation:fade .35s ease both}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.fade{animation:none}.opt{transition:none}#moonShadow{transition:none!important}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.opt{transition:none}#moonShadow{transition:none!important}
+  .z{animation:none;opacity:1}}
 </style>
 </head>
 <body>
@@ -86,39 +143,91 @@ ul{margin:0;padding-left:1.1em}li{margin:2px 0}
   <p class="type-line" id="intro" style="margin:0 0 4px">나의 수면 유형은</p>
   <h1 class="type-name">생각 많은 부엉이</h1>
   <p class="type-line">불을 끄면 머릿속 극장이 개봉해요</p>
+  <p class="bubble"><small>잠꼬대</small>“아… 그때 그렇게 말했어야 했는데…”</p>
+  <div id="vsCard" class="vsgo" hidden></div>
 
+  <section><h2>잠버릇 능력치</h2><div class="stat"><span>잠드는 속도</span><span class="moons" role="img" aria-label="5점 중 1점"><i class="on"></i><i></i><i></i><i></i><i></i></span></div><div class="stat"><span>깊은 잠</span><span class="moons" role="img" aria-label="5점 중 3점"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div><div class="stat"><span>아침 기상력</span><span class="moons" role="img" aria-label="5점 중 3점"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div><div class="stat"><span>소리 민감도</span><span class="moons" role="img" aria-label="5점 중 3점"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></div></section>
   <section><h2>이런 밤을 보내요</h2><ul><li>누우면 오늘 한 말이 다시 재생돼요</li><li>내일 할 일을 침대에서 미리 끝내 둬요</li><li>잠드는 데 걸리는 시간이 들쭉날쭉해요</li></ul></section>
-  <section><h2>어울리는 꿀잠 소리 · 파도 + 핑크 노이즈</h2><p>꿀잠의 &quot;잠들기 어려울 때&quot; 믹스예요. 파도 소리에 맞춰 1분에 6번 천천히 숨 쉬는 호흡 가이드가 함께 나와요.</p></section>
+  <section><h2>어울리는 꿀잠 소리</h2>
+    <div class="player">
+      <button class="play" id="play" aria-pressed="false" aria-label="파도 + 핑크 노이즈 15초 미리 듣기"><svg viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+  <circle cx="32" cy="32" r="29" fill="none" stroke="rgba(244,236,214,.16)" stroke-width="4"/>
+  <circle id="ring" cx="32" cy="32" r="29" fill="none" stroke="#E9C46A" stroke-width="4" stroke-linecap="round"
+    stroke-dasharray="182.2" stroke-dashoffset="182.2" transform="rotate(-90 32 32)"/>
+  <circle cx="32" cy="32" r="22" fill="#E9C46A"/>
+  <path class="i-play" d="M28 23.5 L41 32 L28 40.5 Z" fill="#2A1E00"/>
+  <g class="i-pause" fill="#2A1E00"><rect x="25.5" y="24" width="4.5" height="16" rx="1"/><rect x="34" y="24" width="4.5" height="16" rx="1"/></g>
+</svg></button>
+      <div><b>파도 + 핑크 노이즈</b><span class="sub" id="playSub">15초 미리 듣기</span></div>
+    </div>
+    <p>꿀잠의 &quot;잠들기 어려울 때&quot; 믹스예요. 호흡 가이드를 켜면 분당 6번의 느린 호흡을 따라 할 수 있어요.</p>
+    <audio id="audio" src="sound/owl.mp3" preload="none"></audio>
+  </section>
   <section><h2>오늘 밤 해 볼 것</h2><p>생각이 꼬리를 물면 종이에 적어 두고 누워 보세요. 머릿속에서 꺼내 두는 것만으로 가벼워질 수 있어요.</p></section>
-  <section class="mates">
-    <div><h2>같이 자면 꿀잠</h2><a href="koala.html">🐨 흔들흔들 코알라</a></div>
-    <div><h2>같이 자면 뒤척뒤척</h2><a href="rabbit.html">🐇 귀 밝은 토끼</a></div>
+  <section><h2>잠자리 궁합</h2>
+    <div class="mates">
+      <div><h3>같이 자면 꿀잠</h3><a href="pair/owl-sloth.html">🦥 아침이 힘든 나무늘보</a></div>
+      <div><h3>같이 자면 뒤척뒤척</h3><a href="pair/owl-rabbit.html">🐇 귀 밝은 토끼</a></div>
+    </div>
+    <h3>친구 유형을 골라 궁합 보기</h3>
+    <div class="grid" role="group" aria-label="친구 유형"><button data-k="owl" aria-pressed="false" aria-label="생각 많은 부엉이"><span aria-hidden="true">🦉</span><small aria-hidden="true">부엉이</small></button><button data-k="cat" aria-pressed="false" aria-label="예민한 고양이"><span aria-hidden="true">🐈</span><small aria-hidden="true">고양이</small></button><button data-k="rabbit" aria-pressed="false" aria-label="귀 밝은 토끼"><span aria-hidden="true">🐇</span><small aria-hidden="true">토끼</small></button><button data-k="koala" aria-pressed="false" aria-label="흔들흔들 코알라"><span aria-hidden="true">🐨</span><small aria-hidden="true">코알라</small></button><button data-k="sloth" aria-pressed="false" aria-label="아침이 힘든 나무늘보"><span aria-hidden="true">🦥</span><small aria-hidden="true">나무늘보</small></button><button data-k="panda" aria-pressed="false" aria-label="어디서나 꿀잠 판다"><span aria-hidden="true">🐼</span><small aria-hidden="true">판다</small></button><button data-k="bat" aria-pressed="false" aria-label="밤이 좋은 박쥐"><span aria-hidden="true">🦇</span><small aria-hidden="true">박쥐</small></button><button data-k="bear" aria-pressed="false" aria-label="겨울잠 곰"><span aria-hidden="true">🐻</span><small aria-hidden="true">곰</small></button></div>
+    <div id="match" class="match" hidden aria-live="polite"></div>
   </section>
 
   <div class="actions">
     <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.yeolee.goodsleep&amp;referrer=utm_source%3Dtype_test%26utm_medium%3Dweb%26utm_content%3Dowl">꿀잠 앱에서 이 소리 틀고 자기</a>
     <div class="row">
       <button class="btn ghost" id="share">결과 공유하기</button>
-      <a class="btn ghost" href="story/owl.png" download="goodsleep-owl.png">스토리 이미지 저장</a>
+      <a class="btn ghost" href="story/owl.png" download="goodsleep-owl.png">이미지 저장</a>
     </div>
     <a class="btn ghost" id="again" href="index.html">테스트 다시 하기</a>
   </div>
-  <p class="fine">재미로 보는 테스트예요. 의학적 진단이 아니며, 잠이 계속 불편하면 전문의와 상담하세요.<br>
-  꿀잠은 광고 외에 결제·구독이 없는 무료 수면 앱이에요. 소리는 연구에서 밝혀진 음향 특성을 참고해 만들었어요.</p>
+  <div class="others" aria-label="다른 유형 구경하기"><a href="cat.html" title="예민한 고양이" aria-label="예민한 고양이">🐈</a><a href="rabbit.html" title="귀 밝은 토끼" aria-label="귀 밝은 토끼">🐇</a><a href="koala.html" title="흔들흔들 코알라" aria-label="흔들흔들 코알라">🐨</a><a href="sloth.html" title="아침이 힘든 나무늘보" aria-label="아침이 힘든 나무늘보">🦥</a><a href="panda.html" title="어디서나 꿀잠 판다" aria-label="어디서나 꿀잠 판다">🐼</a><a href="bat.html" title="밤이 좋은 박쥐" aria-label="밤이 좋은 박쥐">🦇</a><a href="bear.html" title="겨울잠 곰" aria-label="겨울잠 곰">🐻</a></div>
+  <p class="fine">재미로 보는 테스트예요. 의학적 진단이 아니며, 잠이 계속 불편하면 전문의와 상담하세요.<br>꿀잠은 광고 외에 결제·구독이 없는 무료 수면 앱이에요. 자연 소리는 실제 녹음이고, 노이즈는 음향 특성을 반영해 직접 합성했어요.</p>
 </main>
 <div class="toast" id="toast" role="status"></div>
 <script>
-const url="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/owl.html";
-const fromQuiz=new URLSearchParams(location.search).get('from')==='quiz';
-if(!fromQuiz){document.getElementById('intro').textContent='친구의 수면 유형은';
-  const a=document.getElementById('again');a.textContent='나도 테스트하기';a.className='btn primary';
-  document.querySelector('.actions').prepend(a);}
+const ME="owl",ORDER=["owl", "cat", "rabbit", "koala", "sloth", "panda", "bat", "bear"],N={"owl": ["🦉", "생각 많은 부엉이", "부엉이", "와"], "cat": ["🐈", "예민한 고양이", "고양이", "와"], "rabbit": ["🐇", "귀 밝은 토끼", "토끼", "와"], "koala": ["🐨", "흔들흔들 코알라", "코알라", "와"], "sloth": ["🦥", "아침이 힘든 나무늘보", "나무늘보", "와"], "panda": ["🐼", "어디서나 꿀잠 판다", "판다", "와"], "bat": ["🦇", "밤이 좋은 박쥐", "박쥐", "와"], "bear": ["🐻", "겨울잠 곰", "곰", "과"]},C={"owl-owl": {"s": 84, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "owl-cat": {"s": 67, "t": "서로 맞춰 가는 사이", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "owl-rabbit": {"s": 61, "t": "서로 맞춰 가는 사이", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "owl-koala": {"s": 72, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "owl-sloth": {"s": 85, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "owl-panda": {"s": 81, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "owl-bat": {"s": 70, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "owl-bear": {"s": 80, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "cat-cat": {"s": 71, "t": "평화로운 룸메이트", "a": "뒤척임이 서로를 깨울 수 있어요. 이불을 따로 쓰면 훨씬 편해져요."}, "cat-rabbit": {"s": 58, "t": "서로 맞춰 가는 사이", "a": "뒤척임이 서로를 깨울 수 있어요. 이불을 따로 쓰면 훨씬 편해져요."}, "cat-koala": {"s": 69, "t": "서로 맞춰 가는 사이", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "cat-sloth": {"s": 72, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "cat-panda": {"s": 82, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "cat-bat": {"s": 57, "t": "서로 맞춰 가는 사이", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "cat-bear": {"s": 80, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "rabbit-rabbit": {"s": 72, "t": "평화로운 룸메이트", "a": "뒤척임이 서로를 깨울 수 있어요. 이불을 따로 쓰면 훨씬 편해져요."}, "rabbit-koala": {"s": 56, "t": "서로 맞춰 가는 사이", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "rabbit-sloth": {"s": 68, "t": "서로 맞춰 가는 사이", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "rabbit-panda": {"s": 76, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "rabbit-bat": {"s": 46, "t": "각방이 서로를 위한 배려", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "rabbit-bear": {"s": 76, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "koala-koala": {"s": 96, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "koala-sloth": {"s": 78, "t": "평화로운 룸메이트", "a": "소리를 틀지 말지가 관건이에요. 아주 작게 틀거나 한쪽은 이어폰을 써 보세요."}, "koala-panda": {"s": 93, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "koala-bat": {"s": 69, "t": "서로 맞춰 가는 사이", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "koala-bear": {"s": 88, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "sloth-sloth": {"s": 93, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "sloth-panda": {"s": 82, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "sloth-bat": {"s": 80, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "sloth-bear": {"s": 82, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "panda-panda": {"s": 98, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "panda-bat": {"s": 72, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "panda-bear": {"s": 96, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "bat-bat": {"s": 89, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}, "bat-bear": {"s": 71, "t": "평화로운 룸메이트", "a": "잠드는 시간이 달라요. 늦게 자는 쪽이 불빛과 소리를 줄여 주면 평화가 찾아와요."}, "bear-bear": {"s": 96, "t": "천생연분 꿀잠 메이트", "a": "잠버릇이 잘 맞아요. 같은 방에서도 각자의 꿀잠을 지킬 수 있어요."}},URL_="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/owl.html";
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const params=new URLSearchParams(location.search);
+const fromQuiz=params.get('from')==='quiz';
+const vs=ORDER.includes(params.get('vs'))?params.get('vs'):null;
+// 주소창 주소를 그대로 복사해 보내도 친구 화면으로 열리게 쿼리를 지운다.
+if(location.search)history.replaceState(null,'',location.pathname);
+function pk(a,b){return ORDER.indexOf(a)<=ORDER.indexOf(b)?a+'-'+b:b+'-'+a;}
+function countUp(el){const n=+el.dataset.n;if(RM){el.textContent=n;return;}const t0=performance.now();
+  (function f(t){const p=Math.min(1,(t-t0)/700);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);})(t0);}
+function matchBody(o){const k=pk(ME,o),c=C[k];
+  return '<div class="mscore"><span class="pe" aria-hidden="true">'+N[ME][0]+' '+N[o][0]+'</span><span><b data-n="'+c.s+'">'+c.s+'</b>점</span></div>'+
+    '<p class="tier">'+c.t+'</p><p>'+c.a+'</p><a class="mlink" href="pair/'+k+'.html">궁합 자세히 보고 공유하기</a>';}
+const card=document.getElementById('vsCard');
+if(!fromQuiz){
+  document.getElementById('intro').textContent='친구의 수면 유형은';
+  card.hidden=false;card.innerHTML='<a class="btn primary" href="index.html?vs='+ME+'">나도 테스트하고 궁합 보기</a>';
+  const a=document.getElementById('again');a.textContent='나도 테스트하기';a.href='index.html?vs='+ME;
+}else if(vs){
+  card.hidden=false;card.className='match vsgo';
+  card.innerHTML='<p class="mt">친구 '+N[vs][0]+' '+N[vs][2]+N[vs][3]+' 나의 잠자리 궁합</p>'+matchBody(vs);
+  countUp(card.querySelector('[data-n]'));
+}
+const box=document.getElementById('match');
+document.querySelectorAll('.grid button').forEach(b=>{b.onclick=()=>{
+  document.querySelectorAll('.grid button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  box.hidden=false;box.innerHTML=matchBody(b.dataset.k);countUp(box.querySelector('[data-n]'));};});
+// 미리듣기: 누를 때만 받는다(preload=none).
+const au=document.getElementById('audio'),pb=document.getElementById('play'),ring=document.getElementById('ring'),sub=document.getElementById('playSub');
+const L=182.2;
+pb.onclick=()=>{if(au.paused){au.play().catch(()=>{sub.textContent='소리를 재생하지 못했어요';});}else au.pause();};
+au.onplay=()=>{pb.classList.add('on');pb.setAttribute('aria-pressed','true');sub.textContent='듣는 중';};
+au.onpause=()=>{pb.classList.remove('on');pb.setAttribute('aria-pressed','false');sub.textContent=au.ended?'다시 듣기':'15초 미리 듣기';};
+au.ontimeupdate=()=>{ring.style.strokeDashoffset=L*(1-au.currentTime/(au.duration||15));};
+au.onended=()=>{ring.style.strokeDashoffset=L;};
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800);}
-document.getElementById('share').onclick=async()=>{
-  const data={title:"꿀잠 수면 유형 테스트",text:"나는 생각 많은 부엉이 🦉 너는?",url};
-  if(navigator.share){try{await navigator.share(data);}catch(e){}return;}
-  try{await navigator.clipboard.writeText("나는 생각 많은 부엉이 🦉 너는?"+' '+url);toast('링크를 복사했어요');}catch(e){prompt('이 링크를 복사하세요',url);}
-};
+async function share(title,text,url){
+  if(navigator.share){try{await navigator.share({title,text,url});}catch(e){}return;}
+  try{await navigator.clipboard.writeText(text+' '+url);toast('링크를 복사했어요');}catch(e){prompt('이 링크를 복사하세요',url);}
+}
+document.getElementById('share').onclick=()=>share('꿀잠 수면 유형 테스트',"나는 🦉 생각 많은 부엉이! 너는 어떤 잠꾸러기야? 테스트하고 우리 잠자리 궁합도 봐 줘",URL_);
 </script>
 </body>
 </html>

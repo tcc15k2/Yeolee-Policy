@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>나는 어떤 잠꾸러기? 꿀잠 수면 유형 테스트</title>
-<meta name="description" content="8개 질문으로 알아보는 나의 잠버릇 동물 유형과 어울리는 밤의 소리">
+<meta name="description" content="질문 10개로 알아보는 나의 잠버릇 동물, 어울리는 밤의 소리, 친구와의 잠자리 궁합">
 <meta property="og:type" content="website">
 <meta property="og:title" content="나는 어떤 잠꾸러기? 꿀잠 수면 유형 테스트">
-<meta property="og:description" content="8개 질문으로 알아보는 나의 잠버릇 동물 유형과 어울리는 밤의 소리">
+<meta property="og:description" content="질문 10개로 알아보는 나의 잠버릇 동물, 어울리는 밤의 소리, 친구와의 잠자리 궁합">
 <meta property="og:image" content="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/og/index.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -19,8 +19,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
-:root{--night:#0E1024;--night2:#1B1E3E;--honey:#E9C46A;--cream:#F4ECD6;--lav:#B7B3D6;--line:rgba(244,236,214,.14)}
+:root{--night:#0E1024;--night2:#1B1E3E;--honey:#E9C46A;--cream:#F4ECD6;--lav:#B7B3D6;--ink:#2A2440;--line:rgba(244,236,214,.14)}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{margin:0;background:var(--night);color:var(--cream)}
 body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;font-size:17px;line-height:1.6;
   min-height:100svh;background:radial-gradient(120% 70% at 50% -10%,#272B5C 0%,var(--night) 60%) fixed;
@@ -34,16 +35,20 @@ main{max-width:440px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-dire
 .moon{display:block;margin:8px auto 0}
 .brand{display:flex;align-items:center;gap:8px;color:var(--lav);font-size:15px;text-decoration:none}
 .brand b{color:var(--honey);font-weight:700}
-h1,.type-name{font-family:"Gowun Batang",serif;font-weight:700;letter-spacing:-.01em}
-h1{font-size:34px;line-height:1.3;margin:20px 0 12px}
-.lead{color:var(--lav);margin:0 0 28px}
+h1,.type-name,.tier,.q,.bubble,.say p,.analyzing{font-family:"Gowun Batang",serif}
+h1{font-size:34px;line-height:1.3;margin:20px 0 12px;font-weight:700;letter-spacing:-.01em}
+.lead{color:var(--lav);margin:0 0 22px}
+.cast{list-style:none;display:flex;justify-content:center;gap:5px;padding:0;margin:0 0 28px}
+.cast li{width:37px;height:37px;border-radius:50%;background:rgba(244,236,214,.07);display:grid;place-items:center;font-size:20px;margin:0}
 .q:focus{outline:none}
-.q{font-family:"Gowun Batang",serif;font-size:27px;line-height:1.35;margin:24px 0 22px;min-height:2.7em}
-.count{color:var(--lav);font-size:15px;margin-top:18px}
+.q{font-size:27px;line-height:1.35;margin:24px 0 22px;min-height:2.7em;font-weight:700}
+.count{display:flex;justify-content:space-between;align-items:center;color:var(--lav);font-size:15px;margin-top:18px}
+.back{background:none;color:var(--lav);font-size:15px;padding:6px 0;text-decoration:underline;text-underline-offset:3px}
 .opts{display:flex;flex-direction:column;gap:10px}
-button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:none;display:block;text-align:left}
-.opt{background:rgba(244,236,214,.06);border:1px solid var(--line);border-radius:14px;padding:15px 18px;font-size:17px;
-  transition:background .15s,border-color .15s}
+button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:none;display:block;text-align:left;background:none}
+.opt{display:flex;align-items:center;gap:14px;background:rgba(244,236,214,.06);border:1px solid var(--line);border-radius:14px;
+  padding:14px 16px;font-size:17px;transition:background .15s,border-color .15s}
+.opt .e{font-size:24px;width:30px;text-align:center;flex:none;line-height:1}
 .opt:hover{background:rgba(233,196,106,.12);border-color:rgba(233,196,106,.5)}
 .opt:active{transform:scale(.99)}
 .primary{background:var(--honey);color:#2A1E00;font-weight:700;border-radius:999px;padding:16px 22px;text-align:center;font-size:17px}
@@ -53,22 +58,74 @@ button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:n
 .spacer{flex:1}
 .fine{color:var(--lav);font-size:13px;line-height:1.55;margin-top:28px}
 .fine a{color:var(--lav)}
+.analyzing{text-align:center;font-size:23px;margin:30px 0 0}
+.z{display:inline-block;color:var(--honey);animation:zz 1.2s ease-in-out infinite;opacity:0;margin-left:2px}
+.z:nth-child(2){animation-delay:.2s}.z:nth-child(3){animation-delay:.4s}
+@keyframes zz{0%{opacity:0;transform:translateY(4px)}40%{opacity:1}100%{opacity:0;transform:translateY(-8px)}}
 .hero-emoji{font-size:64px;line-height:1;text-align:center;margin:-112px 0 40px;position:relative}
-.type-name{font-size:36px;line-height:1.25;text-align:center;margin:0}
-.type-line{text-align:center;color:var(--lav);margin:8px 0 26px}
+.type-name{font-size:36px;line-height:1.25;text-align:center;margin:0;font-weight:700}
+.type-line{text-align:center;color:var(--lav);margin:8px 0 18px}
+.bubble{position:relative;align-self:center;max-width:320px;margin:4px 0 26px;background:var(--cream);color:var(--ink);
+  border-radius:18px;padding:12px 18px 13px;text-align:center;font-size:18px;line-height:1.45}
+.bubble:before{content:"";position:absolute;top:-9px;left:50%;margin-left:-9px;border:9px solid transparent;border-top:0;border-bottom-color:var(--cream)}
+.bubble small{display:block;font-family:"Pretendard Variable",Pretendard,sans-serif;font-size:12px;color:#6B6590;margin-bottom:1px}
 section{border-top:1px solid var(--line);padding:18px 0}
-section h2{font-size:15px;font-weight:600;color:var(--honey);margin:0 0 8px}
+section h2{font-size:15px;font-weight:600;color:var(--honey);margin:0 0 10px}
+section h3{font-size:14px;font-weight:500;color:var(--lav);margin:0 0 4px}
 section p{margin:0}
 ul{margin:0;padding-left:1.1em}li{margin:2px 0}
-.mates{display:flex;gap:12px}.mates>div{flex:1}
+.stat{display:flex;align-items:center;justify-content:space-between;padding:5px 0}
+.moons{display:flex;gap:7px}
+.moons i{width:15px;height:15px;border-radius:50%;background:rgba(244,236,214,.13)}
+.moons i.on{background:var(--honey);box-shadow:0 0 8px rgba(233,196,106,.45)}
+.player{display:flex;align-items:center;gap:14px;margin:0 0 12px}
+.play{width:64px;height:64px;border-radius:50%;padding:0;flex:none}
+.play .i-pause{display:none}.play.on .i-pause{display:inline}.play.on .i-play{display:none}
+.player b{display:block;font-weight:600}
+.sub{color:var(--lav);font-size:14px}
+.mates{display:flex;gap:12px;margin-bottom:16px}.mates>div{flex:1}
 .mates a{color:var(--cream);text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}
+.grid button{border-radius:14px;background:rgba(244,236,214,.06);border:1px solid var(--line);padding:10px 0 8px;text-align:center}
+.grid button span{display:block;font-size:26px;line-height:1.2}
+.grid button small{display:block;font-size:13px;color:var(--lav);margin-top:2px}
+.grid button[aria-pressed=true]{border-color:var(--honey);background:rgba(233,196,106,.16)}
+.match{margin-top:14px;padding:16px 18px;border-radius:16px;background:rgba(233,196,106,.08);border:1px solid rgba(233,196,106,.35)}
+.match .mt{color:var(--lav);font-size:14px;margin:0 0 4px}
+.mscore{display:flex;align-items:baseline;justify-content:space-between}
+.mscore .pe{font-size:26px}
+.mscore b{font-family:"Gowun Batang",serif;font-size:44px;color:var(--honey);font-variant-numeric:tabular-nums}
+.match .tier{font-size:21px;font-weight:700;margin:2px 0 6px}
+.match p{margin:0}
+.mlink{display:inline-block;margin-top:10px;color:var(--honey);font-size:15px;text-underline-offset:3px}
+.vsgo{margin:0 0 22px}
 .actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.others{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:22px}
+.others a{width:40px;height:40px;border-radius:50%;background:rgba(244,236,214,.06);display:grid;place-items:center;font-size:21px;text-decoration:none}
 .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--cream);color:var(--night);
   padding:10px 16px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.on{opacity:1}
+.duo{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin:30px 0 8px}
+.who{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--cream);text-decoration:none;text-align:center;font-size:15px;line-height:1.3}
+.orb{width:92px;height:92px;border-radius:50%;background:var(--honey);display:grid;place-items:center;font-size:48px;
+  box-shadow:0 0 0 10px rgba(233,196,106,.10),0 0 36px rgba(233,196,106,.35)}
+.vs{text-align:center;color:var(--lav)}
+.vs b{display:block;font-family:"Gowun Batang",serif;font-size:56px;line-height:1;color:var(--honey);font-variant-numeric:tabular-nums}
+.tier{font-size:30px;line-height:1.3;text-align:center;margin:18px 0 8px;font-weight:700}
+.advice{text-align:center;color:var(--lav);margin:0 0 22px}
+.factor{padding:7px 0}
+.factor div{display:flex;justify-content:space-between;font-size:16px}
+.factor span{color:var(--lav)}
+.fbar{height:8px;border-radius:4px;background:rgba(244,236,214,.12);margin-top:6px;overflow:hidden}
+.fbar i{display:block;height:100%;border-radius:4px;background:var(--honey)}
+.say{display:flex;gap:10px;align-items:flex-end;margin:10px 0}
+.say.r{flex-direction:row-reverse}
+.say .who-e{font-size:30px;line-height:1}
+.say p{background:rgba(244,236,214,.08);border:1px solid var(--line);border-radius:16px;padding:10px 14px;max-width:78%}
 .fade{animation:fade .35s ease both}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.fade{animation:none}.opt{transition:none}#moonShadow{transition:none!important}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.opt{transition:none}#moonShadow{transition:none!important}
+  .z{animation:none;opacity:1}}
 </style>
 </head>
 <body>
@@ -84,7 +141,8 @@ ul{margin:0;padding-left:1.1em}li{margin:2px 0}
   <g clip-path="url(#disc)"><circle id="moonShadow" cx="49.0" cy="60" r="46" fill="#151833" style="transition:cx .6s ease"/></g>
 </svg>
     <h1>나는 어떤<br>잠꾸러기일까?</h1>
-    <p class="lead">질문 8개에 답하면 잠버릇이 닮은 동물과 어울리는 밤의 소리를 알려 드려요. 1분이면 끝나요.</p>
+    <p class="lead" id="lead">질문 10개에 답하면 잠버릇이 닮은 동물과 어울리는 밤의 소리를 알려 드려요. 1분이면 끝나요.</p>
+    <ul class="cast" aria-label="8가지 잠꾸러기 유형"><li title="생각 많은 부엉이">🦉</li><li title="예민한 고양이">🐈</li><li title="귀 밝은 토끼">🐇</li><li title="흔들흔들 코알라">🐨</li><li title="아침이 힘든 나무늘보">🦥</li><li title="어디서나 꿀잠 판다">🐼</li><li title="밤이 좋은 박쥐">🦇</li><li title="겨울잠 곰">🐻</li></ul>
     <button class="btn primary" id="start">테스트 시작하기</button>
   </div>
   <div class="spacer"></div>
@@ -92,34 +150,52 @@ ul{margin:0;padding-left:1.1em}li{margin:2px 0}
   답변은 이 기기 안에서만 계산되고 어디에도 저장되거나 전송되지 않아요.</p>
 </main>
 <script>
-const D={"q": [["불을 끄고 누우면", [["오늘 있었던 일이 다시 재생된다", {"owl": 2}], ["눈 감자마자 잠든다", {"panda": 2}], ["바깥 소리가 하나하나 들린다", {"rabbit": 2}], ["편한 자세를 찾아 계속 뒤척인다", {"cat": 1, "koala": 1}]]], ["새벽에 깨는 일은", [["거의 없다", {"panda": 2}], ["한두 번, 금방 다시 잔다", {"cat": 1, "sloth": 1}], ["자주 깨고 다시 잠들기 어렵다", {"cat": 2, "owl": 1}], ["밖에서 나는 소리 때문에 깬다", {"rabbit": 2}]]], ["가장 잠이 잘 오는 곳은", [["흔들리는 버스나 기차", {"koala": 2}], ["조용한 내 침대", {"rabbit": 1, "cat": 1}], ["어디든 상관없다", {"panda": 2}], ["TV를 켜 둔 소파", {"koala": 1, "sloth": 1}]]], ["아침 알람이 울리면", [["한 번에 일어난다", {"panda": 1, "cat": 1}], ["스누즈를 세 번은 누른다", {"sloth": 2}], ["알람보다 먼저 깨 있다", {"owl": 1, "cat": 1}], ["알람을 끈 기억이 없다", {"sloth": 2}]]], ["잠들기 직전 휴대폰은", [["잠들 때까지 손에 들고 있다", {"sloth": 1, "owl": 1}], ["화면은 끄고 소리만 틀어 둔다", {"koala": 2}], ["멀리 두고 잔다", {"panda": 1, "rabbit": 1}], ["내일 일정을 보다 생각이 많아진다", {"owl": 2}]]], ["옆 사람이 코를 골면", [["그날 밤은 끝이다", {"rabbit": 2}], ["신경 쓰이지만 결국 잔다", {"cat": 1, "panda": 1}], ["자장가처럼 들린다", {"koala": 2}], ["사실 코 고는 쪽이 나다", {"sloth": 1, "panda": 1}]]], ["주말 아침에는", [["평일과 비슷한 시간에 일어난다", {"panda": 1, "cat": 1}], ["점심 무렵까지 잔다", {"sloth": 2}], ["일찍 깨서 이불 속에서 뒤척인다", {"owl": 1, "cat": 1}], ["아침잠에 낮잠까지 두 번 잔다", {"koala": 1, "sloth": 1}]]], ["가장 좋아하는 밤의 소리는", [["창밖 빗소리", {"cat": 1, "sloth": 1}], ["밀려오는 파도", {"owl": 2}], ["선풍기 바람 소리", {"rabbit": 2}], ["덜컹거리는 기차", {"koala": 2}]]]], "order": ["owl", "cat", "rabbit", "koala", "sloth", "panda"]};
+const D={"q": [["불을 끄고 누우면", [["💭", "오늘 했던 말이 다시 재생된다", {"owl": 2}], ["😴", "눈 감자마자 잠든다", {"panda": 2}], ["👂", "바깥 소리가 하나하나 들린다", {"rabbit": 2}], ["🌃", "이제부터가 진짜 내 시간이다", {"bat": 2}]]], ["새벽에 깨는 일은", [["🌙", "거의 없다", {"panda": 1, "bear": 1}], ["🐾", "한두 번은 꼭 깬다", {"cat": 2}], ["🔊", "밖에서 나는 소리 때문에 깬다", {"rabbit": 2}], ["🕐", "깰 일이 없다, 아직 안 잤으니까", {"bat": 2, "owl": 1}]]], ["가장 잠이 잘 오는 곳은", [["🚌", "흔들리는 버스나 기차", {"koala": 2}], ["🛏️", "조용하고 어두운 내 침대", {"rabbit": 1, "cat": 1}], ["🌏", "어디든, 언제든", {"panda": 2}], ["📺", "TV를 켜 둔 소파", {"sloth": 2}]]], ["아침 알람이 울리면", [["⏰", "한 번에 일어난다", {"panda": 2}], ["🔁", "스누즈를 세 번은 누른다", {"sloth": 2}], ["👀", "알람보다 먼저 깨 있다", {"cat": 2}], ["🤷", "알람을 끈 기억이 없다", {"sloth": 1, "bear": 2}]]], ["잠들기 직전 휴대폰은", [["📱", "잠들 때까지 손에 들고 있다", {"bat": 2, "sloth": 1}], ["🎧", "화면은 끄고 소리만 틀어 둔다", {"koala": 2}], ["🚫", "멀리 두고 잔다", {"panda": 1, "cat": 1}], ["📅", "내일 일정을 보다 생각이 많아진다", {"owl": 2}]]], ["옆 사람이 코를 골면", [["😱", "그날 밤은 끝이다", {"rabbit": 2}], ["😑", "신경 쓰이지만 결국 잔다", {"cat": 1, "panda": 1}], ["🎵", "자장가처럼 들린다", {"koala": 2}], ["🙊", "사실 코 고는 쪽이 나다", {"bear": 2}]]], ["주말 아침에는", [["☀️", "평일과 비슷한 시간에 일어난다", {"panda": 1, "cat": 1}], ["🕛", "점심 무렵까지 잔다", {"sloth": 1, "bat": 1}], ["🔄", "일찍 깨서 이불 속에서 뒤척인다", {"owl": 1, "cat": 1}], ["💤", "아침잠에 낮잠까지 두 번 잔다", {"bear": 2}]]], ["가장 좋아하는 밤의 소리는", [["🌧️", "창밖 빗소리", {"cat": 1, "sloth": 1}], ["🌊", "밀려오는 파도", {"owl": 2}], ["🌀", "선풍기 바람 소리", {"rabbit": 2}], ["🚂", "덜컹거리는 기차", {"koala": 2}]]], ["밤 12시, 지금 나는", [["🛌", "이미 꿈나라", {"panda": 1, "bear": 1}], ["🎮", "하던 거 마저 하는 중", {"bat": 2}], ["🤔", "누웠는데 생각이 꼬리를 문다", {"owl": 2}], ["🫠", "소파에서 잠들었다 깼다 반복", {"sloth": 1, "cat": 1}]]], ["낮잠을 자고 나면", [["😊", "개운하다, 매일 자고 싶다", {"bear": 2}], ["😵", "오히려 더 피곤하다", {"sloth": 2}], ["🙅", "낮잠은 거의 안 잔다", {"bat": 1, "rabbit": 1}], ["🚃", "출퇴근길에 자는 게 낮잠이다", {"koala": 2}]]]], "order": ["owl", "cat", "rabbit", "koala", "sloth", "panda", "bat", "bear"], "names": {"owl": ["🦉", "생각 많은 부엉이", "부엉이", "와"], "cat": ["🐈", "예민한 고양이", "고양이", "와"], "rabbit": ["🐇", "귀 밝은 토끼", "토끼", "와"], "koala": ["🐨", "흔들흔들 코알라", "코알라", "와"], "sloth": ["🦥", "아침이 힘든 나무늘보", "나무늘보", "와"], "panda": ["🐼", "어디서나 꿀잠 판다", "판다", "와"], "bat": ["🦇", "밤이 좋은 박쥐", "박쥐", "와"], "bear": ["🐻", "겨울잠 곰", "곰", "과"]}};
 const view=document.getElementById('view');
-let i=0;const scores={};
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const vsRaw=new URLSearchParams(location.search).get('vs');
+const vs=D.order.includes(vsRaw)?vsRaw:null;
+if(vs){const n=D.names[vs];
+  document.getElementById('lead').textContent='친구는 '+n[0]+' '+n[1]+'예요. 나는 어떤 잠꾸러기인지 알아보고 둘의 잠자리 궁합도 확인해 보세요.';}
+let i=0;const picks=[];
 function setMoon(p){const s=document.getElementById('moonShadow');if(s)s.setAttribute('cx',(60-92*Math.max(p,0.12)).toFixed(1));
   const g=document.querySelector('.moon circle');if(g)g.setAttribute('opacity',p.toFixed(2));}
+function shuffle(a){for(let k=a.length-1;k>0;k--){const j=Math.floor(Math.random()*(k+1));[a[k],a[j]]=[a[j],a[k]];}return a;}
+function esc(s){const d=document.createElement('div');d.textContent=s;return d.innerHTML;}
 function render(){
   const [q,opts]=D.q[i];
   view.classList.remove('fade');void view.offsetWidth;view.classList.add('fade');
   const moon=document.querySelector('.moon').outerHTML;
-  view.innerHTML=moon+'<p class="count">'+(i+1)+' / '+D.q.length+'</p><h2 class="q" tabindex="-1">'+q+'</h2><div class="opts" role="group" aria-label="'+q+'"></div>';
+  view.innerHTML=moon+'<div class="count"><span>'+(i+1)+' / '+D.q.length+'</span>'+(i>0?'<button class="back" id="back">이전 질문</button>':'')+
+    '</div><h2 class="q" tabindex="-1">'+esc(q)+'</h2><div class="opts" role="group" aria-label="'+esc(q)+'"></div>';
   setMoon(i/D.q.length);
   const box=view.querySelector('.opts');
-  opts.forEach(([label,pts])=>{const b=document.createElement('button');b.className='btn opt';b.textContent=label;
-    b.onclick=()=>pick(pts);box.appendChild(b);});
+  // 보기 순서는 매번 섞는다. 점수는 원래 순서(k)로 계산한다.
+  shuffle(opts.map((_,k)=>k)).forEach(k=>{const [e,label]=opts[k];const b=document.createElement('button');b.className='btn opt';
+    b.innerHTML='<span class="e" aria-hidden="true">'+e+'</span><span>'+esc(label)+'</span>';
+    b.onclick=()=>pick(k);box.appendChild(b);});
+  const back=document.getElementById('back');if(back)back.onclick=()=>{picks.pop();i--;render();};
   // 새 질문으로 포커스를 옮긴다(화면 낭독기). 선택지에 두면 이미 고른 것처럼 보인다.
   view.querySelector('.q').focus({preventScroll:true});
 }
-function pick(pts){
-  for(const k in pts)scores[k]=(scores[k]||0)+pts[k];
-  i++;
-  if(i<D.q.length){render();return;}
+function pick(k){picks.push(k);i++;if(i<D.q.length){render();return;}finish();}
+function finish(){
+  const scores={};
+  picks.forEach((k,qi)=>{const pts=D.q[qi][1][k][2];for(const t in pts)scores[t]=(scores[t]||0)+pts[t];});
+  const top=Math.max(...D.order.map(t=>scores[t]||0));
+  const tied=D.order.filter(t=>(scores[t]||0)===top);
+  // 동점이면 답변 조합으로 정해지는 순번으로 고른다(같은 답이면 같은 결과, 유형이 한쪽으로 쏠리지 않게).
+  const h=picks.reduce((a,k)=>(a*31+k+1)%1000003,7);
+  const best=tied[h%tied.length];
+  const moon=document.querySelector('.moon').outerHTML;
+  view.innerHTML=moon+'<p class="analyzing" role="status">잠버릇을 분석하고 있어요<span class="z">z</span><span class="z">z</span><span class="z">z</span></p>';
   setMoon(1);
-  const best=D.order.reduce((a,k)=>((scores[k]||0)>(scores[a]||0)?k:a),D.order[0]);
-  setTimeout(()=>{location.href=best+'.html?from=quiz';},500);
+  setTimeout(()=>{location.href=best+'.html?from=quiz'+(vs?'&vs='+vs:'');},RM?300:1400);
 }
 document.getElementById('start').onclick=render;
 // 미리보기용: 주소 끝에 #q3 처럼 붙이면 그 문항을 바로 연다.
-if(/^#q[1-8]$/.test(location.hash)){i=Number(location.hash.slice(2))-1;render();}
+const m=location.hash.match(/^#q(\d+)$/);
+if(m&&+m[1]>=1&&+m[1]<=D.q.length){i=+m[1]-1;for(let k=0;k<i;k++)picks.push(0);render();}
 </script>
 </body>
 </html>
