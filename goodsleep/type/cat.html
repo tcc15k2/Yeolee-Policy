@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>나는 예민한 고양이 🐈</title>
+<meta name="description" content="잠은 잘 드는데, 밤에 몇 번씩 순찰을 돌아요 · 꿀잠 수면 유형 테스트로 나의 잠버릇 동물을 알아보세요">
+<meta property="og:type" content="website">
+<meta property="og:title" content="나는 예민한 고양이 🐈">
+<meta property="og:description" content="잠은 잘 드는데, 밤에 몇 번씩 순찰을 돌아요 · 꿀잠 수면 유형 테스트로 나의 잠버릇 동물을 알아보세요">
+<meta property="og:image" content="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/og/cat.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/cat.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E1024">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--night:#0E1024;--night2:#1B1E3E;--honey:#E9C46A;--cream:#F4ECD6;--lav:#B7B3D6;--line:rgba(244,236,214,.14)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--night);color:var(--cream)}
+body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;font-size:17px;line-height:1.6;
+  min-height:100svh;background:radial-gradient(120% 70% at 50% -10%,#272B5C 0%,var(--night) 60%) fixed;
+  -webkit-font-smoothing:antialiased}
+main{max-width:440px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-direction:column;min-height:100svh}
+.stars{position:fixed;inset:0;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(1px 1px at 12% 18%,#fff,transparent),radial-gradient(1px 1px at 78% 9%,#fff,transparent),
+  radial-gradient(1.5px 1.5px at 64% 31%,#fff,transparent),radial-gradient(1px 1px at 30% 44%,#fff,transparent),
+  radial-gradient(1px 1px at 88% 52%,#fff,transparent),radial-gradient(1px 1px at 8% 72%,#fff,transparent),
+  radial-gradient(1.5px 1.5px at 46% 86%,#fff,transparent)}
+.moon{display:block;margin:8px auto 0}
+.brand{display:flex;align-items:center;gap:8px;color:var(--lav);font-size:15px;text-decoration:none}
+.brand b{color:var(--honey);font-weight:700}
+h1,.type-name{font-family:"Gowun Batang",serif;font-weight:700;letter-spacing:-.01em}
+h1{font-size:34px;line-height:1.3;margin:20px 0 12px}
+.lead{color:var(--lav);margin:0 0 28px}
+.q:focus{outline:none}
+.q{font-family:"Gowun Batang",serif;font-size:27px;line-height:1.35;margin:24px 0 22px;min-height:2.7em}
+.count{color:var(--lav);font-size:15px;margin-top:18px}
+.opts{display:flex;flex-direction:column;gap:10px}
+button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:none;display:block;text-align:left}
+.opt{background:rgba(244,236,214,.06);border:1px solid var(--line);border-radius:14px;padding:15px 18px;font-size:17px;
+  transition:background .15s,border-color .15s}
+.opt:hover{background:rgba(233,196,106,.12);border-color:rgba(233,196,106,.5)}
+.opt:active{transform:scale(.99)}
+.primary{background:var(--honey);color:#2A1E00;font-weight:700;border-radius:999px;padding:16px 22px;text-align:center;font-size:17px}
+.ghost{border:1px solid var(--line);border-radius:999px;padding:14px 22px;text-align:center;color:var(--cream);background:transparent}
+.row{display:flex;gap:10px}.row>*{flex:1}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+.spacer{flex:1}
+.fine{color:var(--lav);font-size:13px;line-height:1.55;margin-top:28px}
+.fine a{color:var(--lav)}
+.hero-emoji{font-size:64px;line-height:1;text-align:center;margin:-112px 0 40px;position:relative}
+.type-name{font-size:36px;line-height:1.25;text-align:center;margin:0}
+.type-line{text-align:center;color:var(--lav);margin:8px 0 26px}
+section{border-top:1px solid var(--line);padding:18px 0}
+section h2{font-size:15px;font-weight:600;color:var(--honey);margin:0 0 8px}
+section p{margin:0}
+ul{margin:0;padding-left:1.1em}li{margin:2px 0}
+.mates{display:flex;gap:12px}.mates>div{flex:1}
+.mates a{color:var(--cream);text-decoration:none}
+.actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--cream);color:var(--night);
+  padding:10px 16px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+.fade{animation:fade .35s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.opt{transition:none}#moonShadow{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<main>
+  <a class="brand" href="index.html"><b>꿀잠</b> 수면 유형 테스트</a>
+  <svg class="moon" width="160" height="160" viewBox="0 0 120 120" aria-hidden="true">
+  <defs><clipPath id="disc"><circle cx="60" cy="60" r="44"/></clipPath>
+  <radialGradient id="glow"><stop offset="55%" stop-color="#E9C46A" stop-opacity=".35"/><stop offset="100%" stop-color="#E9C46A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="60" cy="60" r="60" fill="url(#glow)" opacity="1"/>
+  <circle cx="60" cy="60" r="44" fill="#E9C46A"/>
+  <g clip-path="url(#disc)"><circle id="moonShadow" cx="-32" cy="60" r="46" fill="#151833" style="transition:cx .6s ease"/></g>
+</svg>
+  <div class="hero-emoji" aria-hidden="true">🐈</div>
+  <p class="type-line" id="intro" style="margin:0 0 4px">나의 수면 유형은</p>
+  <h1 class="type-name">예민한 고양이</h1>
+  <p class="type-line">잠은 잘 드는데, 밤에 몇 번씩 순찰을 돌아요</p>
+
+  <section><h2>이런 밤을 보내요</h2><ul><li>새벽 3시 즈음 한 번은 꼭 눈이 떠져요</li><li>다시 잠들기까지 뒤척이는 시간이 있어요</li><li>자세가 마음에 안 들면 잠이 안 와요</li></ul></section>
+  <section><h2>어울리는 꿀잠 소리 · 브라운 노이즈 + 빗소리</h2><p>꿀잠의 &quot;자주 깰 때&quot; 믹스예요. 낮고 묵직한 소리를 밤새 작게 깔아 둬요.</p></section>
+  <section><h2>오늘 밤 해 볼 것</h2><p>깼을 때 시계를 보지 않는 것부터 해 보세요. 시간을 확인하면 다시 잠들기가 더 어려워질 수 있어요.</p></section>
+  <section class="mates">
+    <div><h2>같이 자면 꿀잠</h2><a href="panda.html">🐼 어디서나 꿀잠 판다</a></div>
+    <div><h2>같이 자면 뒤척뒤척</h2><a href="sloth.html">🦥 아침이 힘든 나무늘보</a></div>
+  </section>
+
+  <div class="actions">
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.yeolee.goodsleep&amp;referrer=utm_source%3Dtype_test%26utm_medium%3Dweb%26utm_content%3Dcat">꿀잠 앱에서 이 소리 틀고 자기</a>
+    <div class="row">
+      <button class="btn ghost" id="share">결과 공유하기</button>
+      <a class="btn ghost" href="story/cat.png" download="goodsleep-cat.png">스토리 이미지 저장</a>
+    </div>
+    <a class="btn ghost" id="again" href="index.html">테스트 다시 하기</a>
+  </div>
+  <p class="fine">재미로 보는 테스트예요. 의학적 진단이 아니며, 잠이 계속 불편하면 전문의와 상담하세요.<br>
+  꿀잠은 광고 외에 결제·구독이 없는 무료 수면 앱이에요. 소리는 연구에서 밝혀진 음향 특성을 참고해 만들었어요.</p>
+</main>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const url="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/cat.html";
+const fromQuiz=new URLSearchParams(location.search).get('from')==='quiz';
+if(!fromQuiz){document.getElementById('intro').textContent='친구의 수면 유형은';
+  const a=document.getElementById('again');a.textContent='나도 테스트하기';a.className='btn primary';
+  document.querySelector('.actions').prepend(a);}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1800);}
+document.getElementById('share').onclick=async()=>{
+  const data={title:"꿀잠 수면 유형 테스트",text:"나는 예민한 고양이 🐈 너는?",url};
+  if(navigator.share){try{await navigator.share(data);}catch(e){}return;}
+  try{await navigator.clipboard.writeText("나는 예민한 고양이 🐈 너는?"+' '+url);toast('링크를 복사했어요');}catch(e){prompt('이 링크를 복사하세요',url);}
+};
+</script>
+</body>
+</html>

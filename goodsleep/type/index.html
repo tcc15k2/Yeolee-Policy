@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>나는 어떤 잠꾸러기? 꿀잠 수면 유형 테스트</title>
+<meta name="description" content="8개 질문으로 알아보는 나의 잠버릇 동물 유형과 어울리는 밤의 소리">
+<meta property="og:type" content="website">
+<meta property="og:title" content="나는 어떤 잠꾸러기? 꿀잠 수면 유형 테스트">
+<meta property="og:description" content="8개 질문으로 알아보는 나의 잠버릇 동물 유형과 어울리는 밤의 소리">
+<meta property="og:image" content="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/og/index.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://tcc15k2.github.io/Yeolee-Policy/goodsleep/type/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E1024">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{--night:#0E1024;--night2:#1B1E3E;--honey:#E9C46A;--cream:#F4ECD6;--lav:#B7B3D6;--line:rgba(244,236,214,.14)}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--night);color:var(--cream)}
+body{font-family:"Pretendard Variable",Pretendard,system-ui,sans-serif;font-size:17px;line-height:1.6;
+  min-height:100svh;background:radial-gradient(120% 70% at 50% -10%,#272B5C 0%,var(--night) 60%) fixed;
+  -webkit-font-smoothing:antialiased}
+main{max-width:440px;margin:0 auto;padding:28px 20px 40px;display:flex;flex-direction:column;min-height:100svh}
+.stars{position:fixed;inset:0;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(1px 1px at 12% 18%,#fff,transparent),radial-gradient(1px 1px at 78% 9%,#fff,transparent),
+  radial-gradient(1.5px 1.5px at 64% 31%,#fff,transparent),radial-gradient(1px 1px at 30% 44%,#fff,transparent),
+  radial-gradient(1px 1px at 88% 52%,#fff,transparent),radial-gradient(1px 1px at 8% 72%,#fff,transparent),
+  radial-gradient(1.5px 1.5px at 46% 86%,#fff,transparent)}
+.moon{display:block;margin:8px auto 0}
+.brand{display:flex;align-items:center;gap:8px;color:var(--lav);font-size:15px;text-decoration:none}
+.brand b{color:var(--honey);font-weight:700}
+h1,.type-name{font-family:"Gowun Batang",serif;font-weight:700;letter-spacing:-.01em}
+h1{font-size:34px;line-height:1.3;margin:20px 0 12px}
+.lead{color:var(--lav);margin:0 0 28px}
+.q:focus{outline:none}
+.q{font-family:"Gowun Batang",serif;font-size:27px;line-height:1.35;margin:24px 0 22px;min-height:2.7em}
+.count{color:var(--lav);font-size:15px;margin-top:18px}
+.opts{display:flex;flex-direction:column;gap:10px}
+button,.btn{font:inherit;color:inherit;cursor:pointer;border:0;text-decoration:none;display:block;text-align:left}
+.opt{background:rgba(244,236,214,.06);border:1px solid var(--line);border-radius:14px;padding:15px 18px;font-size:17px;
+  transition:background .15s,border-color .15s}
+.opt:hover{background:rgba(233,196,106,.12);border-color:rgba(233,196,106,.5)}
+.opt:active{transform:scale(.99)}
+.primary{background:var(--honey);color:#2A1E00;font-weight:700;border-radius:999px;padding:16px 22px;text-align:center;font-size:17px}
+.ghost{border:1px solid var(--line);border-radius:999px;padding:14px 22px;text-align:center;color:var(--cream);background:transparent}
+.row{display:flex;gap:10px}.row>*{flex:1}
+:focus-visible{outline:3px solid var(--honey);outline-offset:3px}
+.spacer{flex:1}
+.fine{color:var(--lav);font-size:13px;line-height:1.55;margin-top:28px}
+.fine a{color:var(--lav)}
+.hero-emoji{font-size:64px;line-height:1;text-align:center;margin:-112px 0 40px;position:relative}
+.type-name{font-size:36px;line-height:1.25;text-align:center;margin:0}
+.type-line{text-align:center;color:var(--lav);margin:8px 0 26px}
+section{border-top:1px solid var(--line);padding:18px 0}
+section h2{font-size:15px;font-weight:600;color:var(--honey);margin:0 0 8px}
+section p{margin:0}
+ul{margin:0;padding-left:1.1em}li{margin:2px 0}
+.mates{display:flex;gap:12px}.mates>div{flex:1}
+.mates a{color:var(--cream);text-decoration:none}
+.actions{display:flex;flex-direction:column;gap:10px;margin-top:22px}
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:var(--cream);color:var(--night);
+  padding:10px 16px;border-radius:999px;font-size:15px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+.fade{animation:fade .35s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.opt{transition:none}#moonShadow{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<main>
+  <a class="brand" href="https://play.google.com/store/apps/details?id=com.yeolee.goodsleep&amp;referrer=utm_source%3Dtype_test%26utm_medium%3Dweb%26utm_content%3Dindex"><b>꿀잠</b> 수면 유형 테스트</a>
+  <div id="view" class="fade">
+    <svg class="moon" width="120" height="120" viewBox="0 0 120 120" aria-hidden="true">
+  <defs><clipPath id="disc"><circle cx="60" cy="60" r="44"/></clipPath>
+  <radialGradient id="glow"><stop offset="55%" stop-color="#E9C46A" stop-opacity=".35"/><stop offset="100%" stop-color="#E9C46A" stop-opacity="0"/></radialGradient></defs>
+  <circle cx="60" cy="60" r="60" fill="url(#glow)" opacity="0"/>
+  <circle cx="60" cy="60" r="44" fill="#E9C46A"/>
+  <g clip-path="url(#disc)"><circle id="moonShadow" cx="49.0" cy="60" r="46" fill="#151833" style="transition:cx .6s ease"/></g>
+</svg>
+    <h1>나는 어떤<br>잠꾸러기일까?</h1>
+    <p class="lead">질문 8개에 답하면 잠버릇이 닮은 동물과 어울리는 밤의 소리를 알려 드려요. 1분이면 끝나요.</p>
+    <button class="btn primary" id="start">테스트 시작하기</button>
+  </div>
+  <div class="spacer"></div>
+  <p class="fine">재미로 보는 테스트예요. 의학적 진단이 아니며, 잠이 계속 불편하면 전문의와 상담하세요.<br>
+  답변은 이 기기 안에서만 계산되고 어디에도 저장되거나 전송되지 않아요.</p>
+</main>
+<script>
+const D={"q": [["불을 끄고 누우면", [["오늘 있었던 일이 다시 재생된다", {"owl": 2}], ["눈 감자마자 잠든다", {"panda": 2}], ["바깥 소리가 하나하나 들린다", {"rabbit": 2}], ["편한 자세를 찾아 계속 뒤척인다", {"cat": 1, "koala": 1}]]], ["새벽에 깨는 일은", [["거의 없다", {"panda": 2}], ["한두 번, 금방 다시 잔다", {"cat": 1, "sloth": 1}], ["자주 깨고 다시 잠들기 어렵다", {"cat": 2, "owl": 1}], ["밖에서 나는 소리 때문에 깬다", {"rabbit": 2}]]], ["가장 잠이 잘 오는 곳은", [["흔들리는 버스나 기차", {"koala": 2}], ["조용한 내 침대", {"rabbit": 1, "cat": 1}], ["어디든 상관없다", {"panda": 2}], ["TV를 켜 둔 소파", {"koala": 1, "sloth": 1}]]], ["아침 알람이 울리면", [["한 번에 일어난다", {"panda": 1, "cat": 1}], ["스누즈를 세 번은 누른다", {"sloth": 2}], ["알람보다 먼저 깨 있다", {"owl": 1, "cat": 1}], ["알람을 끈 기억이 없다", {"sloth": 2}]]], ["잠들기 직전 휴대폰은", [["잠들 때까지 손에 들고 있다", {"sloth": 1, "owl": 1}], ["화면은 끄고 소리만 틀어 둔다", {"koala": 2}], ["멀리 두고 잔다", {"panda": 1, "rabbit": 1}], ["내일 일정을 보다 생각이 많아진다", {"owl": 2}]]], ["옆 사람이 코를 골면", [["그날 밤은 끝이다", {"rabbit": 2}], ["신경 쓰이지만 결국 잔다", {"cat": 1, "panda": 1}], ["자장가처럼 들린다", {"koala": 2}], ["사실 코 고는 쪽이 나다", {"sloth": 1, "panda": 1}]]], ["주말 아침에는", [["평일과 비슷한 시간에 일어난다", {"panda": 1, "cat": 1}], ["점심 무렵까지 잔다", {"sloth": 2}], ["일찍 깨서 이불 속에서 뒤척인다", {"owl": 1, "cat": 1}], ["아침잠에 낮잠까지 두 번 잔다", {"koala": 1, "sloth": 1}]]], ["가장 좋아하는 밤의 소리는", [["창밖 빗소리", {"cat": 1, "sloth": 1}], ["밀려오는 파도", {"owl": 2}], ["선풍기 바람 소리", {"rabbit": 2}], ["덜컹거리는 기차", {"koala": 2}]]]], "order": ["owl", "cat", "rabbit", "koala", "sloth", "panda"]};
+const view=document.getElementById('view');
+let i=0;const scores={};
+function setMoon(p){const s=document.getElementById('moonShadow');if(s)s.setAttribute('cx',(60-92*Math.max(p,0.12)).toFixed(1));
+  const g=document.querySelector('.moon circle');if(g)g.setAttribute('opacity',p.toFixed(2));}
+function render(){
+  const [q,opts]=D.q[i];
+  view.classList.remove('fade');void view.offsetWidth;view.classList.add('fade');
+  const moon=document.querySelector('.moon').outerHTML;
+  view.innerHTML=moon+'<p class="count">'+(i+1)+' / '+D.q.length+'</p><h2 class="q" tabindex="-1">'+q+'</h2><div class="opts" role="group" aria-label="'+q+'"></div>';
+  setMoon(i/D.q.length);
+  const box=view.querySelector('.opts');
+  opts.forEach(([label,pts])=>{const b=document.createElement('button');b.className='btn opt';b.textContent=label;
+    b.onclick=()=>pick(pts);box.appendChild(b);});
+  // 새 질문으로 포커스를 옮긴다(화면 낭독기). 선택지에 두면 이미 고른 것처럼 보인다.
+  view.querySelector('.q').focus({preventScroll:true});
+}
+function pick(pts){
+  for(const k in pts)scores[k]=(scores[k]||0)+pts[k];
+  i++;
+  if(i<D.q.length){render();return;}
+  setMoon(1);
+  const best=D.order.reduce((a,k)=>((scores[k]||0)>(scores[a]||0)?k:a),D.order[0]);
+  setTimeout(()=>{location.href=best+'.html?from=quiz';},500);
+}
+document.getElementById('start').onclick=render;
+// 미리보기용: 주소 끝에 #q3 처럼 붙이면 그 문항을 바로 연다.
+if(/^#q[1-8]$/.test(location.hash)){i=Number(location.hash.slice(2))-1;render();}
+</script>
+</body>
+</html>
