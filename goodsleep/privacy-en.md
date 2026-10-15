@@ -2,7 +2,7 @@
 
 Effective date: 2026-10-15
 Operator: Yeolee · Contact: tcc15k2@gmail.com
-Korean version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy.html
+Korean version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy.html · German version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-de.html
 
 ## 1. What GoodSleep does
 GoodSleep is a free app that tracks your sleep and plays sounds designed to reflect acoustic characteristics identified in sleep research. It is not a medical device and does not replace diagnosis or treatment.
@@ -57,6 +57,12 @@ GoodSleep is not directed to children under 14 (or the equivalent minimum age in
 ## 7. Changes
 If this policy changes, we will say so in the app and in this document together with the effective date.
 
-## 8. Contact
+## 8. Users in the EU/EEA, the UK and Switzerland
+- **Controller**: Yeolee (individual developer), tcc15k2@gmail.com.
+- **Legal bases (GDPR Art. 6(1))**: account and backup — performance of the service you requested (b); Health Connect — your consent (a), which you can withdraw in Health Connect at any time; advertising (AdMob) — your consent through the UMP form (a); usage statistics (Firebase Analytics) — legitimate interest in improving the app (f), which you can turn off in Profile at any time; crash reports and Remote Config — legitimate interest in stable and secure operation (f). Information that stays on your phone (section 2) is not transmitted to us.
+- **International transfers**: Firebase and AdMob are provided by Google, and data may be transferred to the United States. Google LLC is certified under the EU-US Data Privacy Framework, and the European Commission's standard contractual clauses also apply.
+- **Your rights**: access, rectification, erasure, restriction of processing, data portability (for example through the CSV export in the app), and objection to processing based on legitimate interests. You can withdraw consent at any time with effect for the future. You also have the right to lodge a complaint with a data protection supervisory authority, in particular in the member state where you live. Send requests to tcc15k2@gmail.com.
+
+## 9. Contact
 Yeolee · tcc15k2@gmail.com
 Web deletion request page: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/account-deletion/en/

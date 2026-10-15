@@ -2,7 +2,7 @@
 
 시행일: 2026-10-15
 운영자: Yeolee · 문의: tcc15k2@gmail.com
-English version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-en.html
+English version: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-en.html · Deutsche Fassung: https://tcc15k2.github.io/Yeolee-Policy/goodsleep/privacy-de.html
 
 ## 1. 꿀잠이 하는 일
 꿀잠(GoodSleep)은 수면을 측정하고, 수면 연구에서 밝혀진 음향 특성을 반영해 만든 소리를 재생하는 무료 앱입니다. 의료기기가 아니며 질병의 진단·치료를 대신하지 않습니다.
