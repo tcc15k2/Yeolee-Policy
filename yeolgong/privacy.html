@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>열공모드 개인정보처리방침</title>
+<meta name="description" content="열공모드 앱이 어떤 정보를 어디에 저장하고, 무엇을 외부로 보내며, 어떻게 지울 수 있는지 설명합니다.">
+<link rel="canonical" href="https://tcc15k2.github.io/Yeolee-Policy/yeolgong/privacy.html">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --text: #1f2328;
+    --muted: #5b616b;
+    --border: #e6e1d8;
+    --head-bg: #f4efe6;
+    --accent: #a85d07;
+    --accent-soft: #fdf3e2;
+    --glow: #f4b350;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1420;
+      --surface: #161c2b;
+      --text: #e8e6e1;
+      --muted: #a3a9b5;
+      --border: #283149;
+      --head-bg: #1b2234;
+      --accent: #f2b45a;
+      --accent-soft: #262114;
+      --glow: #f2b45a;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1420;
+    --surface: #161c2b;
+    --text: #e8e6e1;
+    --muted: #a3a9b5;
+    --border: #283149;
+    --head-bg: #1b2234;
+    --accent: #f2b45a;
+    --accent-soft: #262114;
+    --glow: #f2b45a;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Malgun Gothic", "Noto Sans KR", "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 72px; }
+
+  header { margin-bottom: 32px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--accent); }
+  .lamp {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--glow);
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--glow) 18%, transparent), 0 0 18px var(--glow);
+  }
+  h1 { font-size: 1.9rem; line-height: 1.3; margin: 8px 0 16px; letter-spacing: -0.01em; }
+  .meta { display: flex; flex-wrap: wrap; gap: 4px 20px; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 0.95rem; }
+  .meta b { color: var(--text); font-weight: 600; margin-right: 6px; }
+  .lead { margin: 20px 0 0; }
+
+  .summary {
+    background: var(--accent-soft);
+    border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 32px 0;
+  }
+  .summary h2 { margin: 0 0 8px; font-size: 1.1rem; border: 0; padding: 0; }
+  .summary ul { margin: 0; padding-left: 1.2em; }
+  .summary li + li { margin-top: 4px; }
+
+  nav.toc { border: 1px solid var(--border); background: var(--surface); border-radius: 12px; padding: 16px 24px; margin-bottom: 40px; }
+  nav.toc h2 { font-size: 0.95rem; color: var(--muted); margin: 0 0 8px; border: 0; padding: 0; }
+  nav.toc ol { margin: 0; padding-left: 1.4em; columns: 2; column-gap: 32px; }
+  nav.toc li { break-inside: avoid; }
+
+  section { scroll-margin-top: 16px; }
+  h2 { font-size: 1.3rem; line-height: 1.4; margin: 48px 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  h3 { font-size: 1.08rem; margin: 28px 0 8px; }
+  p { margin: 12px 0; }
+  ul { padding-left: 1.2em; }
+  li + li { margin-top: 4px; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  strong { font-weight: 700; }
+
+  .table-wrap { margin: 16px 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  tr:last-child > th, tr:last-child > td { border-bottom: 0; }
+  thead th { background: var(--head-bg); font-weight: 600; white-space: nowrap; }
+  table.kv th[scope="row"] { background: var(--head-bg); font-weight: 600; width: 9.5em; }
+  td.nowrap { white-space: nowrap; }
+  td a { overflow-wrap: anywhere; }
+
+  .history { color: var(--muted); font-size: 0.95rem; }
+  footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    main { padding-top: 32px; }
+    h1 { font-size: 1.6rem; }
+    .summary { padding: 16px 18px; }
+    nav.toc { padding: 14px 18px; }
+    nav.toc ol { columns: 1; }
+
+    table.stack, table.stack tbody, table.kv, table.kv tbody { display: block; width: 100%; }
+    table.stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    table.stack tr { display: block; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+    table.stack tr:last-child { border-bottom: 0; }
+    table.stack td { display: block; padding: 2px 0; border: 0; }
+    table.stack td::before { content: attr(data-label); display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-top: 6px; }
+    table.stack td:first-child { font-weight: 700; }
+    table.stack td:first-child::before { display: none; }
+    td.nowrap { white-space: normal; }
+
+    table.kv tr { display: block; border-bottom: 1px solid var(--border); }
+    table.kv tr:last-child { border-bottom: 0; }
+    table.kv th[scope="row"], table.kv td { display: block; width: auto; border: 0; }
+    table.kv th[scope="row"] { padding: 8px 14px 6px; font-size: 0.85rem; }
+    table.kv td { padding: 8px 14px 10px; }
+  }
+
+  @media print {
+    body { background: #fff; color: #000; font-size: 11pt; }
+    main { max-width: none; padding: 0; }
+    nav.toc { display: none; }
+    .summary, .table-wrap { break-inside: avoid; }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="brand"><span class="lamp" aria-hidden="true"></span>열공모드</div>
+  <h1>개인정보처리방침</h1>
+  <ul class="meta">
+    <li><b>시행일</b>2026-10-15</li>
+    <li><b>운영자</b>Yeolee</li>
+    <li><b>문의</b><a href="mailto:tcc15k2@gmail.com">tcc15k2@gmail.com</a></li>
+  </ul>
+  <p class="lead">열공모드는 「개인정보 보호법」에 따라 이용자의 개인정보를 보호하고 관련 문의를 빠르게 처리하기 위해 이 방침을 둡니다.</p>
+</header>
+
+<aside class="summary" aria-labelledby="summary-title">
+  <h2 id="summary-title">한눈에 보기</h2>
+  <ul>
+    <li>로그인 없이 모든 기능을 쓸 수 있습니다. 이름, 이메일, 전화번호를 받지 않습니다.</li>
+    <li>공부 기록, 과목, 약속, 메모는 <strong>이 폰 안에만</strong> 저장하고 서버로 보내지 않습니다.</li>
+    <li>광고가 없고 광고 ID를 쓰지 않습니다.</li>
+    <li>창문(지금 공부 중인 사람 수)에는 <strong>동의한 경우에만</strong> 매일 바뀌는 무작위 번호, 시험 분류, 공부 중인지 여부를 보냅니다.</li>
+    <li>앱 개선을 위한 사용 통계와 오류 보고는 이름이나 연락처와 연결되지 않으며, 설정에서 끌 수 있습니다.</li>
+  </ul>
+</aside>
+
+<nav class="toc" aria-labelledby="toc-title">
+  <h2 id="toc-title">목차</h2>
+  <ol>
+    <li><a href="#s1">열공모드가 하는 일</a></li>
+    <li><a href="#s2">이 폰에만 저장되는 정보</a></li>
+    <li><a href="#s3">외부로 보내는 정보</a></li>
+    <li><a href="#s4">앱이 요청하는 권한</a></li>
+    <li><a href="#s5">처리 목적</a></li>
+    <li><a href="#s6">보관 기간과 파기</a></li>
+    <li><a href="#s7">제3자 제공</a></li>
+    <li><a href="#s8">처리 위탁과 국외 이전</a></li>
+    <li><a href="#s9">이용자의 권리와 행사 방법</a></li>
+    <li><a href="#s10">만 14세 미만 아동</a></li>
+    <li><a href="#s11">자동 수집 장치</a></li>
+    <li><a href="#s12">안전성 확보 조치</a></li>
+    <li><a href="#s13">개인정보 보호책임자</a></li>
+    <li><a href="#s14">권익 침해 구제</a></li>
+    <li><a href="#s15">방침의 변경</a></li>
+  </ol>
+</nav>
+
+<section id="s1">
+  <h2>1. 열공모드가 하는 일</h2>
+  <p>열공모드는 과목별로 오늘 할 공부를 정하고(약속), 공부 시간을 기록하고, 약속을 지켰는지 보여 주는 무료 공부 앱입니다.</p>
+</section>
+
+<section id="s2">
+  <h2>2. 이 폰에만 저장되는 정보</h2>
+  <div class="table-wrap">
+    <table class="stack">
+      <thead><tr><th scope="col">정보</th><th scope="col">내용</th><th scope="col">용도</th></tr></thead>
+      <tbody>
+        <tr><td>오늘의 약속</td><td data-label="내용">과목, 목표 시간</td><td data-label="용도">오늘 화면, 하루 마무리</td></tr>
+        <tr><td>공부 기록</td><td data-label="내용">공부를 시작·멈춤·다시 시작·끝낸 시각, 과목, 공부 시간</td><td data-label="용도">기록, 통계, 위젯</td></tr>
+        <tr><td>메모</td><td data-label="내용">과목이나 하루에 남긴 메모(쓰는 경우)</td><td data-label="용도">기록 보기</td></tr>
+        <tr><td>시험·설정</td><td data-label="내용">준비하는 시험, 시험일(D-day), 하루 시작 시각, 소리·알림·화면 설정</td><td data-label="용도">앱 동작</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>이 정보는 서버로 보내지 않으며 운영자도 볼 수 없습니다.</li>
+    <li>Android 기기 백업(Google 계정 자동 백업)에도 넣지 않습니다. 그래서 앱을 지우면 기록을 되살릴 수 없습니다. 필요하면 앱의 "CSV 내보내기"로 파일을 저장해 두세요. 내보낸 파일은 이용자가 고른 곳에 저장되며, 앱이 따로 보내지 않습니다.</li>
+  </ul>
+</section>
+
+<section id="s3">
+  <h2>3. 외부로 보내는 정보</h2>
+
+  <h3 id="s3-1">3-1. 창문 (동의한 경우에만)</h3>
+  <p>창문은 지금 같이 공부하는 사람 수를 보여 주는 기능입니다. 처음 공부를 시작한 뒤 "내 불빛도 창문에 보탤까요?"라고 한 번 묻고, 동의한 경우에만 아래 정보를 보냅니다. 동의하지 않아도 창문 숫자는 볼 수 있습니다.</p>
+  <div class="table-wrap">
+    <table class="kv">
+      <tbody>
+        <tr><th scope="row">보내는 정보</th><td>매일 바뀌는 무작위 번호, 준비하는 시험 분류(수능 / 공무원 시험 / 자격증·어학 / 대학·그 밖), 공부 중인지 여부</td></tr>
+        <tr><th scope="row">보내지 않는 정보</th><td>이름, 공부 시간, 과목, 메모, 위치</td></tr>
+        <tr><th scope="row">보내는 때</th><td>공부를 시작하고 끝낼 때, 공부하는 동안 약 5분마다</td></tr>
+        <tr><th scope="row">목적</th><td>지금 공부 중인 사람 수와 오늘 공부한 사람 수 집계</td></tr>
+        <tr><th scope="row">보관</th><td>무작위 번호가 붙은 신호는 집계가 끝나면 지우며 <strong>48시간을 넘겨 보관하지 않습니다</strong>. 번호 없이 숫자만 남은 집계 결과는 통계로 남을 수 있습니다.</td></tr>
+        <tr><th scope="row">끄는 방법</th><td>설정의 "창문에 내 불빛 보태기"를 끄면 그때부터 보내지 않습니다.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>무작위 번호는 폰에서 만들고 매일 새 번호로 바꿉니다. 그래서 서로 다른 날의 신호를 같은 사람의 것으로 이을 수 없습니다.</li>
+    <li>창문 숫자를 주고받는 과정에서 IP 주소가 서버에 전달됩니다. IP 주소는 집계에 쓰지 않으며, 서버 운영 기록(로그)에 남은 경우 30일 안에 자동으로 지워집니다.</li>
+  </ul>
+
+  <h3 id="s3-2">3-2. 사용 통계와 오류 보고 (Google Firebase)</h3>
+  <div class="table-wrap">
+    <table class="stack">
+      <thead><tr><th scope="col">서비스</th><th scope="col">보내는 정보</th><th scope="col">목적</th><th scope="col">보관</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Firebase Analytics</td>
+          <td data-label="보내는 정보">앱 인스턴스 ID(설치마다 만들어지는 무작위 식별자), 앱 실행·화면 보기 같은 사용 기록, 공부 시작 같은 기능 사용 횟수, 기기 모델·OS·앱 버전·언어, IP 주소로 추정한 대략적인 위치(국가·도시 수준)</td>
+          <td data-label="목적">어떤 기능이 쓰이는지 파악해 앱 개선</td>
+          <td data-label="보관" class="nowrap">2개월</td>
+        </tr>
+        <tr>
+          <td>Firebase Crashlytics</td>
+          <td data-label="보내는 정보">앱이 비정상 종료될 때의 오류 보고서(오류가 난 코드 위치, 기기 모델·OS·앱 버전, 오류 당시 기기 상태), Crashlytics 설치 ID, Firebase 설치 ID</td>
+          <td data-label="목적">오류 원인 확인과 수정</td>
+          <td data-label="보관" class="nowrap">90일</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>사용 통계에는 공부 시간, 과목, 약속, 메모의 내용을 넣지 않습니다.</li>
+    <li>설정의 "사용 통계·오류 보고 보내기"를 끄면 두 서비스 모두 그때부터 보내지 않습니다.</li>
+  </ul>
+
+  <h3 id="s3-3">3-3. 보내지 않는 정보</h3>
+  <p>이름, 이메일, 전화번호, 정확한 위치, 연락처, 사진·파일, 공부 기록·과목·약속·메모의 내용, 광고 ID는 보내지 않습니다.</p>
+</section>
+
+<section id="s4">
+  <h2>4. 앱이 요청하는 권한</h2>
+  <div class="table-wrap">
+    <table class="stack">
+      <thead><tr><th scope="col">권한</th><th scope="col">쓰는 곳</th><th scope="col">필수 여부</th></tr></thead>
+      <tbody>
+        <tr><td>알림</td><td data-label="쓰는 곳">공부하는 동안 경과 시간을 알림과 잠금화면에 표시</td><td data-label="필수 여부">선택. 거부해도 기록은 됩니다.</td></tr>
+        <tr><td>방해 금지 접근</td><td data-label="쓰는 곳">시스템의 "열공모드"(공부하는 동안 알림을 조용히 하는 모드) 켜고 끄기</td><td data-label="필수 여부">선택. "열공모드 연결"을 누를 때만 요청합니다.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>마이크, 카메라, 위치, 연락처, 사진 권한은 요청하지 않습니다.</li>
+    <li>권한은 Android 설정에서 언제든 거둘 수 있습니다.</li>
+  </ul>
+</section>
+
+<section id="s5">
+  <h2>5. 처리 목적</h2>
+  <p>열공모드는 2~3절에 적은 목적으로만 정보를 씁니다. 목적이 바뀌면 미리 알리고, 필요한 경우 다시 동의를 받습니다.</p>
+</section>
+
+<section id="s6">
+  <h2>6. 보관 기간과 파기</h2>
+  <div class="table-wrap">
+    <table class="kv">
+      <tbody>
+        <tr><th scope="row">이 폰 안의 정보</th><td>이용자가 지울 때까지(앱의 "데이터 삭제" 또는 앱 삭제)</td></tr>
+        <tr><th scope="row">창문 신호<br>(무작위 번호 포함)</th><td>최대 48시간</td></tr>
+        <tr><th scope="row">창문 서버 운영 기록<br>(IP 주소 포함)</th><td>30일</td></tr>
+        <tr><th scope="row">사용 통계<br>(Firebase Analytics)</th><td>2개월</td></tr>
+        <tr><th scope="row">오류 보고<br>(Firebase Crashlytics)</th><td>90일</td></tr>
+        <tr><th scope="row">문의 메일</th><td>답변을 마친 뒤 1년</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>보관 기간이 지나거나 목적을 이루면 지체 없이 복구할 수 없는 방법으로 지웁니다. 종이로 보관하는 개인정보는 없습니다.</p>
+</section>
+
+<section id="s7">
+  <h2>7. 제3자 제공</h2>
+  <p>개인정보를 제3자에게 제공하지 않습니다. 다만 법률에 특별한 규정이 있는 경우처럼 「개인정보 보호법」이 허용하는 경우는 예외로 합니다.</p>
+</section>
+
+<section id="s8">
+  <h2>8. 처리 위탁과 국외 이전</h2>
+  <p>앱 운영을 위해 아래 업무를 맡기며, 이 과정에서 정보가 국외로 이전됩니다.</p>
+  <div class="table-wrap">
+    <table class="kv">
+      <tbody>
+        <tr><th scope="row">받는 자</th><td>Google LLC<br>1600 Amphitheatre Parkway, Mountain View, CA 94043, USA<br>개인정보 문의: <a href="https://support.google.com/policies/contact/general_privacy_form">Google 개인정보 문의 양식</a></td></tr>
+        <tr><th scope="row">맡기는 업무</th><td>사용 통계 분석(Firebase Analytics), 오류 보고 수집(Firebase Crashlytics), 창문 집계 서버 운영(Firebase)</td></tr>
+        <tr><th scope="row">이전 국가</th><td>미국 등 Google이 데이터센터를 운영하는 국가</td></tr>
+        <tr><th scope="row">이전 항목</th><td><a href="#s3">3절</a>에 적은 보내는 정보</td></tr>
+        <tr><th scope="row">이전 시기와 방법</th><td>앱을 쓰는 동안 네트워크로 수시 전송(TLS 암호화)</td></tr>
+        <tr><th scope="row">이용 목적과<br>보유 기간</th><td><a href="#s3">3절</a>, <a href="#s6">6절</a>과 같음</td></tr>
+        <tr><th scope="row">거부 방법과 효과</th><td>설정에서 "사용 통계·오류 보고 보내기"와 "창문에 내 불빛 보태기"를 끄면 보내지 않습니다. 꺼도 앱의 모든 기능을 쓸 수 있습니다.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Google의 정보 처리는 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>과 <a href="https://firebase.google.com/support/privacy">Firebase 개인정보 안내</a>를 따릅니다.</p>
+</section>
+
+<section id="s9">
+  <h2>9. 이용자의 권리와 행사 방법</h2>
+  <p>이용자는 언제든 자신의 개인정보를 열람하거나 정정·삭제·처리정지를 요구할 수 있습니다.</p>
+  <ul>
+    <li><strong>앱에서 바로:</strong> "데이터 삭제"(이 폰 안의 기록을 모두 지우고 사용 통계 식별자를 새로 만듦), "사용 통계·오류 보고 보내기" 끄기, "창문에 내 불빛 보태기" 끄기</li>
+    <li><strong>메일:</strong> <a href="mailto:tcc15k2@gmail.com">tcc15k2@gmail.com</a>으로 요청하면 7일 안에 처리하고 결과를 알려 드립니다. 늦어지면 사유와 예정일을 알려 드립니다.</li>
+    <li>서버로 보낸 정보(사용 통계, 오류 보고, 창문 신호)는 이름이나 연락처와 연결되지 않아 요청만으로는 누구의 정보인지 찾기 어려울 수 있습니다. 이런 정보는 <a href="#s6">6절</a>의 기간이 지나면 자동으로 지워집니다.</li>
+  </ul>
+</section>
+
+<section id="s10">
+  <h2>10. 만 14세 미만 아동</h2>
+  <p>열공모드는 만 14세 미만 아동을 주된 대상으로 하지 않으며, 만 14세 미만 아동의 개인정보를 알면서 수집하지 않습니다. 수집된 사실을 알게 되면 지체 없이 지웁니다. 법정대리인은 <a href="#s9">9절</a>의 메일로 열람이나 삭제를 요청할 수 있습니다.</p>
+</section>
+
+<section id="s11">
+  <h2>11. 자동 수집 장치</h2>
+  <p>앱은 쿠키를 쓰지 않습니다. <a href="#s3-2">3-2절</a>의 Firebase가 설치마다 만들어지는 식별자(앱 인스턴스 ID, Firebase 설치 ID)로 정보를 자동으로 모으며, 설정의 "사용 통계·오류 보고 보내기"를 끄면 거부할 수 있습니다.</p>
+</section>
+
+<section id="s12">
+  <h2>12. 안전성 확보 조치</h2>
+  <ul>
+    <li>공부 기록을 서버로 보내지 않는 구조로 수집 자체를 줄입니다.</li>
+    <li>모든 전송을 TLS로 암호화합니다.</li>
+    <li>서버와 Firebase 콘솔 접근을 운영자 계정으로 한정하고 2단계 인증을 씁니다.</li>
+    <li>앱에서 광고 ID 권한을 제거해 광고 ID를 읽지 않습니다.</li>
+  </ul>
+</section>
+
+<section id="s13">
+  <h2>13. 개인정보 보호책임자</h2>
+  <div class="table-wrap">
+    <table class="kv">
+      <tbody>
+        <tr><th scope="row">책임자</th><td>Yeolee (운영자)</td></tr>
+        <tr><th scope="row">연락처</th><td><a href="mailto:tcc15k2@gmail.com">tcc15k2@gmail.com</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="s14">
+  <h2>14. 권익 침해 구제</h2>
+  <p>개인정보 침해에 대한 상담이나 분쟁 해결은 아래 기관에 신청할 수 있습니다.</p>
+  <div class="table-wrap">
+    <table class="stack">
+      <thead><tr><th scope="col">기관</th><th scope="col">전화</th><th scope="col">누리집</th></tr></thead>
+      <tbody>
+        <tr><td>개인정보분쟁조정위원회</td><td data-label="전화"><a href="tel:1833-6972">1833-6972</a></td><td data-label="누리집"><a href="https://www.kopico.go.kr">www.kopico.go.kr</a></td></tr>
+        <tr><td>개인정보침해신고센터(한국인터넷진흥원)</td><td data-label="전화"><a href="tel:118">118</a></td><td data-label="누리집"><a href="https://privacy.kisa.or.kr">privacy.kisa.or.kr</a></td></tr>
+        <tr><td>대검찰청</td><td data-label="전화"><a href="tel:1301">1301</a></td><td data-label="누리집"><a href="https://www.spo.go.kr">www.spo.go.kr</a></td></tr>
+        <tr><td>경찰청</td><td data-label="전화"><a href="tel:182">182</a></td><td data-label="누리집"><a href="https://ecrm.police.go.kr">ecrm.police.go.kr</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="s15">
+  <h2>15. 방침의 변경</h2>
+  <p>방침이 바뀌면 시행 7일 전에 앱과 이 페이지에 알립니다. 새 정보를 수집하는 것처럼 이용자 권리에 중요한 변경은 30일 전에 알리고, 필요한 경우 다시 동의를 받습니다.</p>
+  <ul class="history">
+    <li>2026-10-15: 처음 시행</li>
+  </ul>
+</section>
+
+<footer>열공모드 · Yeolee · <a href="mailto:tcc15k2@gmail.com">tcc15k2@gmail.com</a></footer>
+
+</main>
+</body>
+</html>
