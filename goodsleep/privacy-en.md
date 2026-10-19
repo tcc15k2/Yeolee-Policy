@@ -40,7 +40,7 @@ If you connect it, sleep times and sleep stages are **written** to Health Connec
 | Firebase Analytics | Events such as how often features are used (sleep records and sounds are not sent), device and app version. **Off by default; sent only if you turn on Profile > "Send usage statistics"** | Improving the product | Profile > Send usage statistics |
 | Firebase Crashlytics | Crash and error reports (device model, OS, stack trace, and the recent diagnostic log — app event names and times only, no audio or sleep data) | Stability | — |
 | Firebase Remote Config | (Receive only) feature switch values | Turning a feature off remotely if there is a problem | — |
-| Google AdMob | Advertising ID and app set ID, IP address (which may be used to estimate approximate location), interactions such as app launches and taps, and diagnostic information about app and ad SDK performance | Showing banner ads, measuring and analyzing ad performance, preventing misuse | Profile > Privacy and ad consent |
+| Google AdMob | Advertising ID and app set ID, IP address (which may be used to estimate approximate location), interactions such as app launches and taps, and diagnostic information about app and ad SDK performance | Showing banner and native (card-style) ads, measuring and analyzing ad performance, preventing misuse | Profile > Privacy and ad consent |
 
 - Ads appear only on the Sounds, Journal, Statistics, Profile and Sleep home screens (before tracking starts). **They never appear while you sleep, during the alarm or at the morning check-in.** Banners are hidden from 00:00 to 06:00.
 - In regions where ad consent is required, consent is collected with Google's User Messaging Platform (UMP) form, which you can reopen from Profile.
