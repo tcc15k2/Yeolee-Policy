@@ -26,13 +26,14 @@ Drawings are read and converted **only on your phone** and are never sent to a s
 | Service | Information sent | Purpose | How to turn it off |
 |---|---|---|---|
 | Google AdMob | Advertising ID and app set ID, IP address (may be used to estimate approximate location), interactions such as app launches and taps, app and ads SDK performance diagnostics | Showing banner ads and rewarded ads (watch an ad to get a Pro feature pass), measuring ad performance, preventing fraud | No ads after buying Pro. Settings > Privacy options (in regions where consent is required) |
+| Firebase Analytics (Google) | App usage events (file opened or failed and the error type, file format, file size and opening time as ranges, measurement type, export and print, Pro screen views and purchases), a random ID created per app install, device model, Android and app version | Usage statistics to improve the app | Not collected if you decline ad consent (in regions where consent is required) |
 | Firebase Crashlytics (Google) | When the app crashes or the drawing conversion engine stops: the error record (stack trace), device model, Android and app version, a random ID created per app install, the time, and for an engine stop the file extension and size (never the file name or contents) | Finding and fixing the cause of errors | — |
 | Google Play billing | Purchase information (handled by Google Play; the app never receives card details) | Confirming the Pro purchase | — |
 | Google Play in-app updates | (Talks to Google Play directly) installed version | Telling you about new versions | — |
 
 - Ads appear only as a banner on the home screen and as rewarded ads you choose to watch. They never appear in the drawing viewer.
 - In regions where consent is required, consent is collected with Google's consent management (UMP) form, which you can reopen in Settings.
-- Information sent by AdMob and Crashlytics goes to Google and is handled under Google's Privacy Policy (https://policies.google.com/privacy). All transfers are encrypted with TLS. You can reset or delete the advertising ID in Android settings.
+- Information sent by AdMob, Analytics and Crashlytics goes to Google and is handled under Google's Privacy Policy (https://policies.google.com/privacy). All transfers are encrypted with TLS. You can reset or delete the advertising ID in Android settings.
 - Drawing contents, file names and measurements are never sent to any service.
 
 ## 4. Retention and deletion
