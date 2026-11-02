@@ -29,12 +29,14 @@ This information is not sent off your device and is excluded from cloud backup a
 | Google Play Billing | Google | Ad removal purchase information | Payment and restoring purchases |
 | Google Play app updates | Google | App version information | Offering updates |
 
-Usage events never include file names, paths or document contents. After you buy ad removal, the app does not request ads. In regions that require consent, analytics data is sent only with your consent.
+Usage events never include file names, paths or document contents. After you buy ad removal, the app does not request ads. In regions that require consent, analytics data is sent only with your consent. If you opt out under section 5 in a US state, analytics data is not sent either.
 
 Google handles this information under the [Google Privacy Policy](https://policies.google.com/privacy).
 
 ## 5. Ad consent and your choices
 In regions that require consent, such as the European Economic Area and the UK, the app shows Google's consent form. You can change your choice under "Privacy options" in the app's settings. You can reset or delete your advertising ID in Android settings.
+
+**US state privacy rights.** Some US states, including California, treat certain ad data as a "sale" or "sharing" of personal information. For interest-based ads, the app lets Google and its ad partners receive identifiers such as the advertising ID, usage such as app launches and taps, and approximate location estimated from the IP address. The operator receives no money for this data directly and never includes document contents or file names. To opt out, choose "Don't sell or share my data" under "Privacy options" in the app's settings; that option appears in the states it applies to. You may then still see ads, but they will not be based on this data, and the app works the same either way. Those states may also give you rights to access, correct or delete personal information. The operator holds none of it, so contact us at the address in section 9 for help, or use Google's controls at https://myadcenter.google.com.
 
 ## 6. Permissions
 | Permission | Purpose |
