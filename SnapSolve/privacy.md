@@ -1,6 +1,6 @@
 # 찍풀 개인정보처리방침
 
-시행일: 2026-11-07
+시행일: 2026-11-08
 운영자: Yeolee · 문의: tcc15k2@gmail.com
 
 ## 1. 찍풀이 하는 일
@@ -11,6 +11,7 @@
 - 사진은 Google Cloud 서울 리전의 서버(Firebase Cloud Functions)와 Cloudflare의 네트워크를 거쳐 운영자가 대한민국에서 직접 운영하는 AI 풀이 서버로 전달됩니다. 외부 AI 회사에는 보내지 않습니다.
 - 서버는 풀이를 만든 뒤 사진을 저장하지 않고 버립니다. 사진과 풀이는 휴대폰에만 저장됩니다.
 - 사진에 이름, 얼굴, 연락처 같은 개인정보가 나오지 않도록 문제 부분만 찍어 주세요.
+- 공유 이미지는 기기에서 만들어 사용자가 고른 앱으로 보내며, 운영자는 받지 않습니다.
 
 ## 3. 생년월
 첫 실행 때 입력한 태어난 연도와 월로 만 14세 이상인지 휴대폰에서 확인합니다. 입력한 값은 저장하지 않고 확인 결과만 휴대폰에 기록합니다.
@@ -41,7 +42,7 @@ Cloud Firestore(Google Cloud 서울 리전)에 앱이 자동으로 만드는 익
 | Firebase Authentication (Google) | 익명 ID | 이용 한도와 구독을 익명 ID에 연결 | — |
 | Firebase App Check, Google Play Integrity (Google) | 앱과 기기의 무결성 확인 결과 | 서버 무단 호출 방지 | — |
 | Firebase Cloud Functions, Cloud Firestore (Google) | 문제 사진(전달만 하고 저장하지 않음), 5절의 정보 | 풀이 요청 중계와 이용 기록 저장 | — |
-| Firebase Analytics (Google) | 첫 실행과 세션 같은 기본 사용 기록, 풀이 시작과 결과, 풀이에 걸린 시간, 광고 보상과 실패, 구독 화면 조회와 구매, 신고 사유, 기기 정보, 앱 인스턴스 ID | 앱 개선 | — |
+| Firebase Analytics (Google) | 첫 실행과 세션 같은 기본 사용 기록, 풀이 시작과 결과, 풀이에 걸린 시간, 광고 보상과 실패, 구독 화면 조회와 구매, 신고 사유, 공유 버튼 사용, 기기 정보, 앱 인스턴스 ID | 앱 개선 | — |
 | Firebase Remote Config (Google) | 앱 인스턴스 ID, 앱 버전 | 이용 한도 표시와 업데이트 안내 | — |
 | Cloudflare Tunnel (Cloudflare, Inc.) | 문제 사진과 풀이 결과(전달만 하고 저장하지 않음) | 운영자의 AI 풀이 서버 연결 | — |
 | Google Play 결제 | 구매 정보(Google Play가 처리하며 앱은 카드 정보를 받지 않음) | 구독 결제와 확인 | Google Play에서 구독 해지 |
