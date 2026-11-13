@@ -1,6 +1,6 @@
 # 찍풀 개인정보처리방침
 
-시행일: 2026-11-08
+시행일: 2026-11-13
 운영자: Yeolee · 문의: tcc15k2@gmail.com
 
 ## 1. 찍풀이 하는 일
@@ -8,8 +8,8 @@
 
 ## 2. 문제 사진
 - 풀이를 요청하면 고른 문제 사진을 암호화된 연결(HTTPS)로 운영자의 서버에 보냅니다.
-- 사진은 Google Cloud 서울 리전의 서버(Firebase Cloud Functions)와 Cloudflare의 네트워크를 거쳐 운영자가 대한민국에서 직접 운영하는 AI 풀이 서버로 전달됩니다. 외부 AI 회사에는 보내지 않습니다.
-- 서버는 풀이를 만든 뒤 사진을 저장하지 않고 버립니다. 사진과 풀이는 휴대폰에만 저장됩니다.
+- 사진은 Google Cloud 서울 리전의 서버(Firebase Cloud Functions)를 거쳐 AI 풀이를 위해 Anthropic, PBC(미국)의 Claude API로 전달됩니다.
+- 운영자의 서버는 풀이를 만든 뒤 사진을 저장하지 않고 버립니다. 사진과 풀이는 휴대폰에만 저장됩니다.
 - 사진에 이름, 얼굴, 연락처 같은 개인정보가 나오지 않도록 문제 부분만 찍어 주세요.
 - 공유 이미지는 기기에서 만들어 사용자가 고른 앱으로 보내며, 운영자는 받지 않습니다.
 
@@ -44,10 +44,10 @@ Cloud Firestore(Google Cloud 서울 리전)에 앱이 자동으로 만드는 익
 | Firebase Cloud Functions, Cloud Firestore (Google) | 문제 사진(전달만 하고 저장하지 않음), 5절의 정보 | 풀이 요청 중계와 이용 기록 저장 | — |
 | Firebase Analytics (Google) | 첫 실행과 세션 같은 기본 사용 기록, 풀이 시작과 결과, 풀이에 걸린 시간, 광고 보상과 실패, 구독 화면 조회와 구매, 신고 사유, 공유 버튼 사용, 기기 정보, 앱 인스턴스 ID | 앱 개선 | — |
 | Firebase Remote Config (Google) | 앱 인스턴스 ID, 앱 버전 | 이용 한도 표시와 업데이트 안내 | — |
-| Cloudflare Tunnel (Cloudflare, Inc.) | 문제 사진과 풀이 결과(전달만 하고 저장하지 않음) | 운영자의 AI 풀이 서버 연결 | — |
+| Claude API (Anthropic, PBC) | 문제 사진과 풀이 결과 | AI 풀이 생성 | — |
 | Google Play 결제 | 구매 정보(Google Play가 처리하며 앱은 카드 정보를 받지 않음) | 구독 결제와 확인 | Google Play에서 구독 해지 |
 
-- Cloudflare를 제외한 위 정보는 Google로 전달되며 [Google 개인정보처리방침](https://policies.google.com/privacy)에 따라 처리됩니다.
+- Anthropic을 제외한 위 정보는 Google로 전달되며 [Google 개인정보처리방침](https://policies.google.com/privacy)에 따라 처리됩니다.
 - 운영자는 개인정보를 판매하지 않습니다.
 
 ## 7. 국외 이전
@@ -58,11 +58,11 @@ Cloud Firestore(Google Cloud 서울 리전)에 앱이 자동으로 만드는 익
 - 이용 목적과 보유 기간: 6절의 목적. 보유 기간은 Google의 정책을 따릅니다.
 - 문의: [Google 개인정보 보호 문의](https://support.google.com/policies/contact/general_privacy_form)
 
-**Cloudflare, Inc. (미국)**
+**Anthropic, PBC (미국)**
 - 이전되는 정보: 문제 사진과 풀이 결과
-- 이전 시점과 방법: 풀이를 요청할 때 암호화된 네트워크로 전송. Cloudflare의 네트워크는 여러 나라에 있으며, 연결 위치에 따라 대한민국 밖의 서버를 지날 수 있습니다.
-- 이용 목적과 보유 기간: 운영자의 AI 풀이 서버 연결. 전달하는 동안에만 처리하며 저장하지 않습니다.
-- 문의: [Cloudflare 개인정보처리방침](https://www.cloudflare.com/privacypolicy/)
+- 이전 시점과 방법: 풀이를 요청할 때 암호화된 네트워크(HTTPS)로 전송
+- 이용 목적과 보유 기간: AI 풀이 생성. 보유 기간은 Anthropic의 정책을 따릅니다.
+- 문의: [Anthropic 개인정보처리방침](https://www.anthropic.com/legal/privacy)
 
 이전을 원하지 않으면 앱을 삭제해 주세요. 광고 ID는 휴대폰 설정에서 삭제할 수 있습니다. 5절의 정보는 Google Cloud 서울 리전에 저장하며, 문제 사진은 어디에도 저장하지 않습니다.
 
@@ -72,8 +72,8 @@ Cloud Firestore(Google Cloud 서울 리전)에 앱이 자동으로 만드는 익
 - 개인정보의 열람, 정정, 삭제, 처리 정지를 tcc15k2@gmail.com으로 요청할 수 있습니다. 정보가 익명 ID로만 저장되므로 확인할 수 있는 범위에서 지체 없이 처리합니다.
 
 ## 9. 안전 조치
-- 앱과 서버 사이, 서버와 AI 풀이 서버 사이를 모두 HTTPS로 암호화합니다.
-- 서버는 앱 무결성 확인과 인증 토큰이 없는 요청을 거절하고, AI 풀이 서버는 접근 키가 있는 요청만 받습니다.
+- 앱과 서버 사이, 서버와 Anthropic 사이를 모두 HTTPS로 암호화합니다.
+- 서버는 앱 무결성 확인과 인증 토큰이 없는 요청을 거절하고, Anthropic API 키는 서버에만 보관합니다.
 - 서버 로그에 문제 사진과 풀이 본문을 남기지 않습니다.
 
 ## 10. 어린이
