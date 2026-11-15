@@ -5,7 +5,7 @@ Operator: Yeolee · Contact: tcc15k2@gmail.com
 Korean version: https://tcc15k2.github.io/Yeolee-Policy/PDFEditor/privacy.html
 
 ## 1. What PDF Editor does
-PDF Editor reads and edits PDFs. You can add pen, highlighter, text boxes, photos and signatures to a PDF, reorder pages, and merge or split files. It can also scan paper documents, turn photos into a PDF, and open Hangul (HWP, HWPX), Word, Excel and PowerPoint documents. There is no sign-up, and the operator runs no server of its own.
+PDF Editor reads and edits PDFs. You can add pen, highlighter, text boxes, photos and signatures to a PDF, replace existing lines of text, reorder pages, and merge or split files. It can also scan paper documents, turn photos into a PDF, and open Hangul (HWP, HWPX), Word, Excel and PowerPoint documents and convert them to PDF. There is no sign-up, and the operator runs no server of its own.
 
 ## 2. Your documents stay on your device
 Documents, scanned images and signatures are processed **only on your device**. Their contents, file names and signature images are not sent to the operator or to advertising or analytics companies. The screen that draws documents runs with internet requests blocked.
@@ -19,7 +19,7 @@ The app has internet permission for ads, usage statistics and purchases. That tr
 | My documents | PDFs you create or edit and save (in your device's Documents › PDFEditor folder) and their document type (receipt, contract, report, other) | Managing documents | Delete in the app or in a file manager |
 | Saved signatures | Signature images you draw and save | Adding signatures to documents | Delete on the signature screen, or by uninstalling |
 | App settings | Theme, document color inversion, Pro purchase state, whether the footer line is on, a save counter used to time the review request | Keeping your settings | By uninstalling |
-| Temporary files | Short-lived files in the app's private storage while scanning, converting photos or editing | Work before saving | When you save or close the screen, and automatically within one hour |
+| Temporary files | Short-lived files in the app's private storage while scanning, converting photos or documents, or editing | Work before saving | When you save or close the screen, and automatically within one hour |
 
 This information is never sent off your device and is excluded from cloud backup and device-to-device transfer. Document passwords are never stored.
 
