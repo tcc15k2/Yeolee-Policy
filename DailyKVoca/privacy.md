@@ -25,7 +25,7 @@ Daily K-Voca is an app for learning Korean words and Hangul. No account or sign-
 | Service | Data passed | Purpose | How to stop |
 |---|---|---|---|
 | Google AdMob | Advertising ID, IP address (may give approximate location), ad views and clicks, device information | Show and measure ads, prevent fraud | Reset or delete the advertising ID in phone settings. Premium removes ads. |
-| Firebase Authentication (Google) | An anonymous ID the app creates. No name, email or phone number | Link your review records to the anonymous ID | — |
+| Firebase Authentication (Google) | A user ID (an anonymous ID the app creates). No name, email or phone number | Link your review records to the anonymous ID | — |
 | Cloud Firestore (Google) | Anonymous ID and per-word review stage, interval, due time, review and miss counts, time first completed | Back up review records | Settings > Delete cloud study records |
 | Firebase Analytics (Google) | Study and game start and end, scores, voice command type, streak card views and shares, review prompt shown, device information, app instance ID | Improve the app | — |
 | Firebase Cloud Messaging (Google) | Push token | Deliver notifications | Turn off notifications |
